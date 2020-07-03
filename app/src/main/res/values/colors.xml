@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#f498ad</color>
+    <color name="colorPrimaryDark">#9dc209</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="teal">#367588</color>
+    <color name="white">#ffffff</color>
+    <color name="azur">#f1f5f8</color>
+    <color name="tealgreen">#00827F</color>
+    <color name="black">#000000</color>
+    <color name="az">#FFFEf9</color>
+    <color name="pale">#FFB6C1</color>
+    <color name="CoralPink">#f88379</color>
+    <color name="gray">#D3D3D3</color>
+</resources>
