@@ -1,6 +1,7 @@
 package com.example.nevihationapplication;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -12,10 +13,11 @@ public class login extends AppCompatActivity {
 
     TextInputLayout e;
     TextInputLayout p;
-    TextInputLayout first;
-    TextInputLayout last;
     Button l;
     Button r;
+
+    String FirstN;
+    String LastN;
 
 
 
@@ -33,8 +35,9 @@ public class login extends AppCompatActivity {
         p=findViewById(R.id.text_input_password);
         l=findViewById(R.id.login);
         r=findViewById(R.id.register);
-        first=findViewById(R.id.f);
-        last=findViewById(R.id.l);
+
+
+
 
         r.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,9 +54,24 @@ public class login extends AppCompatActivity {
                 String eml=e.getEditText().getText().toString();
                 String psw=p.getEditText().getText().toString();
 
+                Cursor cFL=db.getFirstName(eml);
+                while (cFL.moveToNext()) {
+                     FirstN = cFL.getString(1);
+                     LastN = cFL.getString(2);
+                }
+
+                if (eml.equals("") || psw.equals("")  == true) {
+                    Toast.makeText(getApplicationContext(), "Please enter all details.", Toast.LENGTH_SHORT).show();
+                }
+                else
+                    {
+
                 if(db.isLogin(eml,psw)==false)
                 {
                     Intent intent=new Intent(login.this,NevigationDraw.class);
+                    intent.putExtra("First",FirstN);
+                    intent.putExtra("Last",LastN);
+                    intent.putExtra("Email",eml);
                     startActivity(intent);
                     Toast.makeText(getApplicationContext(),"Login Successfully",Toast.LENGTH_LONG).show();
                 }
@@ -61,11 +79,15 @@ public class login extends AppCompatActivity {
                 {
                     e.setError("Invalid email or password");
                 }
+                }
+
 
             }
         });
 
 
     }
+
+
 
 }

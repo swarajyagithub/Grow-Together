@@ -78,6 +78,13 @@ public class database extends SQLiteOpenHelper {
             return true;
 
     }
+     public Cursor getFirstName(String EMAIL)
+     {
+         SQLiteDatabase db=this.getReadableDatabase();
+         Cursor cursorF=db.rawQuery("Select * from "+tableName+" where EMAIL=?",new String[]{EMAIL});
+         return cursorF;
+     }
+
 
 }
 

@@ -1,10 +1,12 @@
 package com.example.nevihationapplication;
 
 import android.content.Intent;
+import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Patterns;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -63,8 +65,8 @@ public class MainActivity extends AppCompatActivity {
                             emailAd.setError("Email already exixts.");
                         } else {
                             mydb.insertData(fname, lmame, em, pas);
-                           Intent intent = new Intent(MainActivity.this, NevigationDraw.class);
-                            startActivity(intent);
+                           //Intent intent = new Intent(MainActivity.this, NevigationDraw.class);
+                            //startActivity(intent);
                             Toast.makeText(getApplicationContext(), "You have successfully registered.", Toast.LENGTH_LONG).show();
                         }
 
@@ -77,8 +79,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-
+    }
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        int id=item.getItemId();
+        if(id==android.R.id.home)
+        {
+            this.finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
 
