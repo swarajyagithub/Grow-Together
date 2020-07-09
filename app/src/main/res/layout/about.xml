@@ -21,6 +21,6 @@
         android:textSize="12sp"
         android:text="About Us"
 
-        android:layout_marginRight="40dp"/>
+        android:layout_marginRight="50dp"/>
 
 </LinearLayout>
