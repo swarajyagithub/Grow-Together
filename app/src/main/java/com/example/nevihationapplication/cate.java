@@ -222,30 +222,16 @@ public class cate extends AppCompatActivity {
         edut.setText(nam.get(6));
         elect.setText(nam.get(7));
 
-        //Cursor cursor1=mydbimg.viewImage();
-       // Bitmap bit1;
-       // while (cursor1.moveToNext()) {
-           // byte[] imgb = cursor1.getBlob(1);
-           // bit1 = BitmapFactory.decodeByteArray(imgb, 0, imgb.length);
-            //imgArray.add(bit1);
-     //   }
-        //ag.setImageBitmap(imgArray.get(0));
+        Cursor cursor1=mydbimg.viewImage();
+        Bitmap bit1;
+       while (cursor1.moveToNext()) {
+            byte[] imgb = cursor1.getBlob(1);
+            bit1 = BitmapFactory.decodeByteArray(imgb, 0, imgb.length);
+            imgArray.add(bit1);
+        }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-        cardView=findViewById(R.id.cardIT);
+       cardView=findViewById(R.id.cardIT);
         cardView.setOnClickListener(new View.OnClickListener() {
          @Override
         public void onClick(View v) {
