@@ -24,35 +24,43 @@
         <TextView
                 android:layout_width="330dp"
                 android:layout_height="35dp"
+                 android:id="@+id/abc"
                android:layout_below="@+id/t"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-                android:id="@+id/tA"/>
+               />
             <TextView
                 android:layout_width="35dp"
                 android:layout_height="35dp"
                 android:id="@+id/text12"
                 android:layout_below="@id/t"
                 android:layout_marginTop="10dp"
-                android:layout_marginLeft="330dp"
+                android:layout_marginLeft="340dp"
+                android:paddingTop="5dp"
+                android:textAlignment="center"
                 android:background="@drawable/circle"/>
     <TextView
         android:layout_width="330dp"
         android:layout_height="35dp"
-        android:layout_below="@+id/tA"
+        android:layout_below="@+id/abc"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:id="@+id/text21"/>
     <TextView
         android:layout_width="35dp"
         android:layout_height="35dp"
         android:id="@+id/text22"
-        android:layout_below="@id/tA"
+        android:layout_below="@id/abc"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="330dp"
+        android:layout_marginLeft="340dp"
+        android:paddingTop="5dp"
+        android:textAlignment="center"
         android:background="@drawable/circle"/>
     <TextView
         android:layout_width="330dp"
         android:layout_height="35dp"
         android:layout_below="@+id/text21"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
         android:id="@+id/text31"/>
     <TextView
@@ -61,7 +69,9 @@
         android:id="@+id/text32"
         android:layout_below="@id/text21"
         android:layout_marginTop="10dp"
-        android:layout_marginLeft="330dp"
+        android:layout_marginLeft="340dp"
+        android:paddingTop="5dp"
+        android:textAlignment="center"
         android:background="@drawable/circle"/>
 
 
