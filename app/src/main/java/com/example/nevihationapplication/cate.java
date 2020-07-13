@@ -133,20 +133,20 @@ public class cate extends AppCompatActivity {
 
 
 //Code for converting drawable image into string and storing that string into database(imageAsString:Database name)
-      ByteArrayOutputStream stream1=new ByteArrayOutputStream();
-      bitmap1.compress(Bitmap.CompressFormat.PNG,100,stream1);
-      byte[] img1=stream1.toByteArray();
-     String ims1=Base64.encodeToString(img1,1);
+      //ByteArrayOutputStream stream1=new ByteArrayOutputStream();
+     // bitmap1.compress(Bitmap.CompressFormat.PNG,100,stream1);
+     // byte[] img1=stream1.toByteArray();
+     //String ims1=Base64.encodeToString(img1,1);
 
 //Inserting image into database(imageAsString)    Storing image as String.
-     boolean r1=imgstring.addImage(ims1);
+    // boolean r1=imgstring.addImage(ims1);
 
 //Code for converting image into byte and storing it into database(databaseImage:Name of database)
-        ByteArrayOutputStream stream2=new ByteArrayOutputStream();
-        bitmap2.compress(Bitmap.CompressFormat.PNG,100,stream2);
-        byte[] img2=stream2.toByteArray();
+       // ByteArrayOutputStream stream2=new ByteArrayOutputStream();
+       // bitmap2.compress(Bitmap.CompressFormat.PNG,100,stream2);
+       // byte[] img2=stream2.toByteArray();
 //Inserting image into database(databaseImage)   Storing images as BLOB.
-       boolean r2=mydbimg.addImage(img2);
+      // boolean r2=mydbimg.addImage(img2);
 
        // ByteArrayOutputStream stream3=new ByteArrayOutputStream();
        // bitmap3.compress(Bitmap.CompressFormat.PNG,100,stream3);
@@ -174,15 +174,15 @@ public class cate extends AppCompatActivity {
 
 //Code for retrieving image from databse(databaseImage)
 
-     Cursor cimg=mydbimg.viewImage();
-        Bitmap bit1=null;
+     //Cursor cimg=mydbimg.viewImage();
+      //  Bitmap bit1=null;
 
-      while (cimg.moveToNext())
-      {
-           byte[] imgb = cimg.getBlob(1);
-           bit1 = BitmapFactory.decodeByteArray(imgb, 0, imgb.length);
-           ag.setImageBitmap(bit1);
-       }
+      //while (cimg.moveToNext())
+     // {
+       //    byte[] imgb = cimg.getBlob(1);
+       //    bit1 = BitmapFactory.decodeByteArray(imgb, 0, imgb.length);
+        //   ag.setImageBitmap(bit1);
+     //  }
 
 
 //code to clear data in arraylist
@@ -209,18 +209,18 @@ public class cate extends AppCompatActivity {
        String agriS= Uri.parse("android.resource://"+R.class.getPackage().getName()+"/" +R.drawable.agri).toString();
 
  //code for adding url as string into database(databaseimage)
-       mydbimg.addImageUrl(agriS);
+       //mydbimg.addImageUrl(agriS);
  //code for inserting url as string into database(imageAsString)
-        imgstring.deleteData();
-        boolean r1=imgurl.addImage(agriS);
+      //  imgstring.deleteData();
+      //  boolean r1=imgurl.addImage(agriS);
 
 //code for retrieving image from database(imageAsString)
-        Cursor curl=imgurl.viewImageU();
-        while (curl.moveToNext())
-        {
-            String s2=curl.getString(1);
-            namS.add(s2);
-        }
+      //  Cursor curl=imgurl.viewImageU();
+       // while (curl.moveToNext())
+       // {
+         //   String s2=curl.getString(1);
+          //  namS.add(s2);
+       // }
 
  //getting identifier of drawable resources and storing it into database(imageURLData2)
         //First Image
