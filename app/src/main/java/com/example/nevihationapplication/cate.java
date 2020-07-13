@@ -237,10 +237,10 @@ public class cate extends AppCompatActivity {
   //Inserting image into database(imageURLData2)
         urlimgint.addImage(igr);
         urlimgint.addImage(gari);
-     boolean r1= urlimgint.addImage(conI);
+     boolean r2= urlimgint.addImage(conI);
 
  //if image is inserted successfully,then display message "Data Inserted"
-    if(r1==true)
+    if(r2==true)
           {
          Toast.makeText(getApplicationContext(),"Data Inserted",Toast.LENGTH_LONG).show();
           }
