@@ -49,8 +49,8 @@ public class subcategory extends AppCompatActivity {
         int num5=4;
         int num6=1;
         String a1="81 Computer,IT & Software Training";
-        String b1=" Software Development & IT Consultant";
-        String c1=" Web Development & Marketing Services";
+        String b1="191 Software Development & IT Consultant";
+        String c1="211 Web Development & Marketing Services";
 
       // Boolean r1= s.insertDataS(a1,num4);
      // Boolean r2= s.insertDataS(b1,num5);

@@ -26,7 +26,7 @@ public class subData extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL("create table " + tableName + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,NUMB INTEGER)");
-        db.execSQL("create table " + tableNameImage + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAMEI TEXT,IMAGE BLOB)");
+
 
 
     }
@@ -36,7 +36,7 @@ public class subData extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("DROP TABLE IF EXISTS " + tableName);
-        db.execSQL("DROP TABLE IF EXISTS " + tableNameImage);
+
         onCreate(db);
 
     }
@@ -61,23 +61,6 @@ public class subData extends SQLiteOpenHelper {
         return res;
     }
 
-    public boolean insertDataI(String nameI, byte[] image) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(colI2, nameI);
-        contentValues.put(colI3, image);
 
-        long result = db.insert(tableNameImage, null, contentValues);
-        if (result == -1)
-            return false;
-        else
-            return true;
-    }
-    public Cursor getDataI()
-    {
-        SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res = db.rawQuery("select * from "+tableNameImage,null);
-        return res;
-    }
 
 }

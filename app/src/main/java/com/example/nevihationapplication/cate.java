@@ -33,24 +33,14 @@ public class cate extends AppCompatActivity {
 
     CardView cardView;
 
- //Database instance
-  arrayListName1 mydb2;
- databaseImage mydbimg;
- photoDatabase photo;
- imageAsString imgstring;
- imageStringURL imgurl;
- imageURLData2 urlimgint;
-
-
-
+    arrayListName1 mydb2;
+    ImageURLData3 data3;
 
 //ArrayList
     ArrayList<String> nam=new ArrayList<String>();
-    ArrayList<Bitmap>  imgArray=new ArrayList<Bitmap>();
-    ArrayList<String> namS=new ArrayList<String>();
     ArrayList<Integer> imgArrayInt=new ArrayList<Integer>();
 
-//Imagevie
+//Imageview
     ImageView ag;
     ImageView gar;
     ImageView auto;
@@ -102,23 +92,7 @@ public class cate extends AppCompatActivity {
 
 
         mydb2 = new arrayListName1(this);
-        mydbimg=new databaseImage(this);
-        photo=new photoDatabase(this);
-        imgstring=new imageAsString(this);
-        imgurl=new imageStringURL(this);
-        urlimgint=new imageURLData2(this);
-
-
-//Getting resource from drawable and converting it into bitmap.
-         Bitmap bitmap1=BitmapFactory.decodeResource(getResources(),R.drawable.agri);
-        Bitmap bitmap2 = BitmapFactory.decodeResource(getResources(), R.drawable.gar);
-        Bitmap bitmap3 = BitmapFactory.decodeResource(getResources(), R.drawable.saprs);
-        Bitmap bitmap4 = BitmapFactory.decodeResource(getResources(), R.drawable.construction);
-       Bitmap bitmap5 = BitmapFactory.decodeResource(getResources(), R.drawable.audit1);
-        Bitmap bitmap6 = BitmapFactory.decodeResource(getResources(), R.drawable.it);
-        Bitmap bitmap7 = BitmapFactory.decodeResource(getResources(), R.drawable.education);
-        Bitmap bitmap8 = BitmapFactory.decodeResource(getResources(), R.drawable.ele);
-
+        data3=new ImageURLData3(this);
 
 
         String a = "Agriculture & Farming";
@@ -132,145 +106,112 @@ public class cate extends AppCompatActivity {
 
 
 
-//Code for converting drawable image into string and storing that string into database(imageAsString:Database name)
-      //ByteArrayOutputStream stream1=new ByteArrayOutputStream();
-     // bitmap1.compress(Bitmap.CompressFormat.PNG,100,stream1);
-     // byte[] img1=stream1.toByteArray();
-     //String ims1=Base64.encodeToString(img1,1);
-
-//Inserting image into database(imageAsString)    Storing image as String.
-    // boolean r1=imgstring.addImage(ims1);
-
-//Code for converting image into byte and storing it into database(databaseImage:Name of database)
-       // ByteArrayOutputStream stream2=new ByteArrayOutputStream();
-       // bitmap2.compress(Bitmap.CompressFormat.PNG,100,stream2);
-       // byte[] img2=stream2.toByteArray();
-//Inserting image into database(databaseImage)   Storing images as BLOB.
-      // boolean r2=mydbimg.addImage(img2);
-
-       // ByteArrayOutputStream stream3=new ByteArrayOutputStream();
-       // bitmap3.compress(Bitmap.CompressFormat.PNG,100,stream3);
-      //  byte[] img3=stream3.toByteArray();
-      //  boolean r3=mydbimg.addImage(img3);
-
-     //   ByteArrayOutputStream stream4=new ByteArrayOutputStream();
-      //  bitmap4.compress(Bitmap.CompressFormat.PNG,100,stream4);
-      //  byte[] img4=stream4.toByteArray();
-     //   boolean r4=mydbimg.addImage(img4);
-
-       // ByteArrayOutputStream stream5=new ByteArrayOutputStream();
-     //   bitmap5.compress(Bitmap.CompressFormat.PNG,100,stream5);
-     //   byte[] img5=stream5.toByteArray();
-      //  boolean r5=mydbimg.addImage(img5);
-
-       // ByteArrayOutputStream stream6=new ByteArrayOutputStream();
-       // bitmap6.compress(Bitmap.CompressFormat.PNG,100,stream6);
-      //  byte[] img6=stream6.toByteArray();
-       // boolean r6=mydbimg.addImage(img6);
 
 
 
 
 
-//Code for retrieving image from databse(databaseImage)
-
-     //Cursor cimg=mydbimg.viewImage();
-      //  Bitmap bit1=null;
-
-      //while (cimg.moveToNext())
-     // {
-       //    byte[] imgb = cimg.getBlob(1);
-       //    bit1 = BitmapFactory.decodeByteArray(imgb, 0, imgb.length);
-        //   ag.setImageBitmap(bit1);
-     //  }
 
 
-//code to clear data in arraylist
-        imgArray.clear();
 
-//Code to remove image(ImageView)
-     ag.setImageBitmap(null);
-      gar.setImageBitmap(null);
-        auto.setImageBitmap(null);
-        cons.setImageBitmap(null);
-        aud.setImageBitmap(null);
-        it.setImageBitmap(null);
-       edu.setImageBitmap(null);
-       elec.setImageBitmap(null);
-
-//Code to get url of drawabale resource(e.g. R.drawable.agri)
-       Uri pathadri= Uri.parse("android.resource://android/drawable/agri");
-       Uri patha=Uri.parse("android.resource://com.segf4ult.test"+R.drawable.agri);
-
-//code to convert url into string
-        String sagri=pathadri.toString();
-
-//getting url of drawable resource and converting it into string.
-       String agriS= Uri.parse("android.resource://"+R.class.getPackage().getName()+"/" +R.drawable.agri).toString();
-
- //code for adding url as string into database(databaseimage)
-       //mydbimg.addImageUrl(agriS);
- //code for inserting url as string into database(imageAsString)
-      //  imgstring.deleteData();
-      //  boolean r1=imgurl.addImage(agriS);
-
-//code for retrieving image from database(imageAsString)
-      //  Cursor curl=imgurl.viewImageU();
-       // while (curl.moveToNext())
-       // {
-         //   String s2=curl.getString(1);
-          //  namS.add(s2);
-       // }
 
  //getting identifier of drawable resources and storing it into database(imageURLData2)
         //First Image
-        String agriurl="@drawable/agri";
-        int igr=getResources().getIdentifier(agriurl,null,getPackageName());
+       // String agriurl="@drawable/agri";
+       // int url1=getResources().getIdentifier(agriurl,null,getPackageName());
+       // boolean r2=data3.addImage(url1);
+
 
         //Second Image
-        String garurl="@drwable/gar";
-        int gari=getResources().getIdentifier(garurl,null,getPackageName());
+       // String garurl="@drawable/gar";
+       // int url2=getResources().getIdentifier(garurl,null,getPackageName());
+    //  boolean r2= data3.addImage(url2);
 
         //Third image
-        int conI=getResources().getIdentifier("@drawable/a",null,getPackageName());
+        //String sparsurl="@drawable/saprs";
+      //  int url3=getResources().getIdentifier(sparsurl,null,getPackageName());
+     //  boolean r2= data3.addImage(url3);
 
-  //Inserting image into database(imageURLData2)
-        urlimgint.addImage(igr);
-        urlimgint.addImage(gari);
-     boolean r2= urlimgint.addImage(conI);
+       // String bulidurl="@drawable/construction";
+       // int url4=getResources().getIdentifier(bulidurl,null,getPackageName());
+      //  boolean r2=data3.addImage(url4);
+
+        //String auditurl="@drawable/audit1";
+       //  int url5=getResources().getIdentifier(auditurl,null,getPackageName());
+       //   boolean r2= data3.addImage(url5);
+
+      //  String iturl="@drawable/it";
+      //  int url6=getResources().getIdentifier(iturl,null,getPackageName());
+     //   boolean r2= data3.addImage(url6);
+
+      //  String eduurl="@drawable/education";
+     //   int url7=getResources().getIdentifier(eduurl,null,getPackageName());
+    //    boolean r2= data3.addImage(url7);
+
+      //  String eleurl="@drawable/ele";
+      //  int url8=getResources().getIdentifier(eleurl,null,getPackageName());
+      //  boolean r2= data3.addImage(url8);
+
+     //   String educurl="@drawable/educa";
+      //  int url9=getResources().getIdentifier(educurl,null,getPackageName());
+     //   boolean r2= data3.addImage(url9);
+
+      //   String eleurl="@drawable/ele";
+       //   int url9=getResources().getIdentifier(eleurl,null,getPackageName());
+      //   boolean r2= data3.addImage(url9);
+
 
  //if image is inserted successfully,then display message "Data Inserted"
-    if(r2==true)
-          {
-         Toast.makeText(getApplicationContext(),"Data Inserted",Toast.LENGTH_LONG).show();
-          }
-         else
-         {
-         Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_LONG).show();
-        }
+   //if(r2==true)
+     //   {
+     //  Toast.makeText(getApplicationContext(),"Data Inserted",Toast.LENGTH_LONG).show();
+      //   }
+      //  else
+       //  { Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_LONG).show();
+       //}
+
+
+        //code to clear data in arraylist
+        imgArrayInt.clear();
+
+
+        ag.setImageDrawable(null);
+        gar.setImageDrawable(null);
+        auto.setImageDrawable(null);
+        cons.setImageDrawable(null);
+        aud.setImageDrawable(null);
+        it.setImageDrawable(null);
+        edu.setImageDrawable(null);
+        elec.setImageDrawable(null);
 
 //Retrieving image identifier from database(imageURLData2)
-        imgArrayInt.clear();
-        Cursor cursor=urlimgint.viewImageS();
-         while (cursor.moveToNext())
+
+       Cursor c2=data3.viewImageS();
+        while (c2.moveToNext())
          {
-            int i=cursor.getInt(1);
+           int i=c2.getInt(1);
               imgArrayInt.add(i);
-                 }
+
+        }
 
  //Setting images to imageview.
-          ag.setImageDrawable(null);
-        Drawable res=getResources().getDrawable(imgArrayInt.get(0));
-       ag.setImageDrawable(res);
 
-          gar.setImageDrawable(null);
-        Drawable res1=getResources().getDrawable(imgArrayInt.get(1));
-        gar.setImageDrawable(res1);
+       // Drawable res1=getResources().getDrawable(imgArrayInt.get(0));
+      ag.setImageDrawable(getResources().getDrawable(imgArrayInt.get(0)));
 
-        Drawable autoD=getResources().getDrawable(imgArrayInt.get(2));
-         auto.setImageDrawable(autoD);
 
-        //Glide.with(this).load(namS.get(0)).into(ag);
+    //    Drawable res2=getResources().getDrawable(imgArrayInt.get(1));
+        gar.setImageDrawable(getResources().getDrawable(imgArrayInt.get(1)));
+
+       // Drawable res3=getResources().getDrawable(imgArrayInt.get(2));
+        auto.setImageDrawable(getResources().getDrawable(imgArrayInt.get(2)));
+       cons.setImageDrawable(getResources().getDrawable(imgArrayInt.get(3)));
+      aud.setImageDrawable(getResources().getDrawable(imgArrayInt.get(4)));
+        it.setImageDrawable(getResources().getDrawable(imgArrayInt.get(5)));
+        edu.setImageDrawable(getResources().getDrawable(imgArrayInt.get(6)));
+
+        elec.setImageDrawable(getResources().getDrawable(imgArrayInt.get(7)));
+
 
 
 

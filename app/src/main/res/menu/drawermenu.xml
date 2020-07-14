@@ -15,16 +15,15 @@
 
     <item
         android:id="@+id/Feedback"
-        android:textColor="@color/teal"
-        android:title="Feedback"
+        app:actionLayout="@layout/feedback"
+        android:title=""
 
         />
 
     <item
         android:id="@+id/Complaints"
-        android:textColor="@color/teal"
-        android:title="Complaints"
-        android:icon="@drawable/complaintsicon"
+        app:actionLayout="@layout/complaints"
+        android:title=""
         />
 
     <item
@@ -43,9 +42,8 @@
 
     <item
         android:id="@+id/FAQ"
-        android:textColor="@color/teal"
-        android:title="FAQ"
-        android:icon="@drawable/faq2"
+        app:actionLayout="@layout/faq"
+        android:title=""
         />
 
     <item

@@ -14,7 +14,7 @@
         android:layout_height="20dp"
         android:layout_marginRight="34dp"
         android:layout_marginTop="9dp"
-        android:src="@drawable/about"/>
+        android:src="@drawable/fq"/>
     <TextView
         android:layout_width="100dp"
         android:layout_height="20dp"
@@ -22,7 +22,7 @@
         android:textSize="14sp"
         android:textColor="@color/black"
         android:layout_marginTop="9dp"
-        android:text="About Us"
+        android:text="FAQ"
 
         android:layout_marginRight="90dp"/>
 
