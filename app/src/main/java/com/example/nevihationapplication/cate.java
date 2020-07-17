@@ -1,5 +1,6 @@
 package com.example.nevihationapplication;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -12,14 +13,25 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Base64;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.BaseAdapter;
+import android.widget.EditText;
+import android.widget.Filter;
+import android.widget.Filterable;
 import android.widget.GridView;
 import android.widget.ImageView;
+
+import android.widget.SearchView;
+import android.widget.SearchView.OnQueryTextListener;
+
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -28,13 +40,20 @@ import java.io.OutputStream;
 import java.time.Instant;
 import java.time.temporal.TemporalAdjuster;
 import java.util.ArrayList;
+import java.util.List;
 
 public class cate extends AppCompatActivity {
 
     CardView cardView;
+    //EditText edit;
+    GridView gridView;
+   SearchView searchView;
+
+
 
     arrayListName1 mydb2;
     ImageURLData3 data3;
+    database dataC;
 
 //ArrayList
     ArrayList<String> nam=new ArrayList<String>();
@@ -59,7 +78,9 @@ public class cate extends AppCompatActivity {
     TextView itt;
     TextView edut;
     TextView elect;
-    private Instant Glide;
+
+
+
 
 
     @Override
@@ -90,9 +111,17 @@ public class cate extends AppCompatActivity {
         edut = findViewById(R.id.educationT);
         elect = findViewById(R.id.eleT);
 
+       // edit=findViewById(R.id.t);
+        searchView=findViewById(R.id.search);
+      //  gridView=findViewById(R.id.gridview);
+
+
+
+
 
         mydb2 = new arrayListName1(this);
         data3=new ImageURLData3(this);
+        dataC=new database(this);
 
 
         String a = "Agriculture & Farming";
@@ -106,20 +135,11 @@ public class cate extends AppCompatActivity {
 
 
 
-
-
-
-
-
-
-
-
-
  //getting identifier of drawable resources and storing it into database(imageURLData2)
         //First Image
-       // String agriurl="@drawable/agri";
-       // int url1=getResources().getIdentifier(agriurl,null,getPackageName());
-       // boolean r2=data3.addImage(url1);
+        String agriurl="@drawable/agri";
+       int url1=getResources().getIdentifier(agriurl,null,getPackageName());
+        boolean r2=dataC.addImage(a,url1);
 
 
         //Second Image
@@ -161,14 +181,15 @@ public class cate extends AppCompatActivity {
       //   boolean r2= data3.addImage(url9);
 
 
+
  //if image is inserted successfully,then display message "Data Inserted"
-   //if(r2==true)
-     //   {
-     //  Toast.makeText(getApplicationContext(),"Data Inserted",Toast.LENGTH_LONG).show();
-      //   }
-      //  else
-       //  { Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_LONG).show();
-       //}
+   if(r2==true)
+        {
+       Toast.makeText(getApplicationContext(),"Data Inserted",Toast.LENGTH_LONG).show();
+         }
+        else
+         { Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_LONG).show();
+       }
 
 
         //code to clear data in arraylist
@@ -186,31 +207,31 @@ public class cate extends AppCompatActivity {
 
 //Retrieving image identifier from database(imageURLData2)
 
-       Cursor c2=data3.viewImageS();
-        while (c2.moveToNext())
-         {
-           int i=c2.getInt(1);
-              imgArrayInt.add(i);
+      // Cursor c2=data3.viewImageS();
+      //  while (c2.moveToNext())
+       //  {
+        //   int i=c2.getInt(1);
+         //     imgArrayInt.add(i);
 
-        }
+      //  }
 
  //Setting images to imageview.
 
        // Drawable res1=getResources().getDrawable(imgArrayInt.get(0));
-      ag.setImageDrawable(getResources().getDrawable(imgArrayInt.get(0)));
+    //  ag.setImageDrawable(getResources().getDrawable(imgArrayInt.get(0)));
 
 
     //    Drawable res2=getResources().getDrawable(imgArrayInt.get(1));
-        gar.setImageDrawable(getResources().getDrawable(imgArrayInt.get(1)));
+    //    gar.setImageDrawable(getResources().getDrawable(imgArrayInt.get(1)));
 
        // Drawable res3=getResources().getDrawable(imgArrayInt.get(2));
-        auto.setImageDrawable(getResources().getDrawable(imgArrayInt.get(2)));
-       cons.setImageDrawable(getResources().getDrawable(imgArrayInt.get(3)));
-      aud.setImageDrawable(getResources().getDrawable(imgArrayInt.get(4)));
-        it.setImageDrawable(getResources().getDrawable(imgArrayInt.get(5)));
-        edu.setImageDrawable(getResources().getDrawable(imgArrayInt.get(6)));
+      //  auto.setImageDrawable(getResources().getDrawable(imgArrayInt.get(2)));
+      // cons.setImageDrawable(getResources().getDrawable(imgArrayInt.get(3)));
+    //  aud.setImageDrawable(getResources().getDrawable(imgArrayInt.get(4)));
+     //   it.setImageDrawable(getResources().getDrawable(imgArrayInt.get(5)));
+     //   edu.setImageDrawable(getResources().getDrawable(imgArrayInt.get(6)));
 
-        elec.setImageDrawable(getResources().getDrawable(imgArrayInt.get(7)));
+     //   elec.setImageDrawable(getResources().getDrawable(imgArrayInt.get(7)));
 
 
 
@@ -263,20 +284,27 @@ public class cate extends AppCompatActivity {
 
 
 
-
-
-
        cardView=findViewById(R.id.cardIT);
+
         cardView.setOnClickListener(new View.OnClickListener() {
          @Override
         public void onClick(View v) {
           Intent in=new Intent(cate.this, subcategory.class);
          startActivity(in);
-         }
-          });
+
+    }
+});
+
+
+
+
+
+
 
 
     }
+
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -296,6 +324,13 @@ public class cate extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
 
     }
+
+
+
+
+
+
+
 
 
 }

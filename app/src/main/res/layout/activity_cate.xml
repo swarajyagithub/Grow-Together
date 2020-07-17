@@ -8,23 +8,29 @@
     android:orientation="vertical"
 
     tools:context=".cate">
-    
-  <EditText
-      android:layout_width="match_parent"
-      android:layout_height="50dp"
-      android:id="@+id/t"
-      android:background="@drawable/edittextrounded"
-      android:layout_marginTop="10dp"
-      android:layout_marginLeft="2dp"
-      android:layout_marginRight="2dp"
-      android:textColor="@color/azur"
-      android:textSize="16sp"
-      android:hint="   Category Search..."/>
-    
-  <ScrollView
+
+
+    <android.support.v7.widget.SearchView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/search"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/edittextrounded"
+        android:queryHint="Category Search..."
+
+        >
+
+    </android.support.v7.widget.SearchView>
+
+
+
+
+
+
+    <ScrollView
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:layout_below="@+id/t"
+      android:layout_below="@+id/search"
 
 
       >
