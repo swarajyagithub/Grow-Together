@@ -29,7 +29,8 @@ import android.widget.Filterable;
 import android.widget.GridView;
 import android.widget.ImageView;
 
-import android.widget.SearchView;
+
+import android.support.v7.widget.SearchView;
 import android.widget.SearchView.OnQueryTextListener;
 
 import android.widget.TextView;
@@ -53,7 +54,7 @@ public class cate extends AppCompatActivity {
 
     arrayListName1 mydb2;
     ImageURLData3 data3;
-    database dataC;
+    singleDatabase singleData;
 
 //ArrayList
     ArrayList<String> nam=new ArrayList<String>();
@@ -112,7 +113,7 @@ public class cate extends AppCompatActivity {
         elect = findViewById(R.id.eleT);
 
        // edit=findViewById(R.id.t);
-        searchView=findViewById(R.id.search);
+       searchView=findViewById(R.id.search);
       //  gridView=findViewById(R.id.gridview);
 
 
@@ -121,7 +122,8 @@ public class cate extends AppCompatActivity {
 
         mydb2 = new arrayListName1(this);
         data3=new ImageURLData3(this);
-        dataC=new database(this);
+        singleData=new singleDatabase(this);
+
 
 
         String a = "Agriculture & Farming";
@@ -137,9 +139,17 @@ public class cate extends AppCompatActivity {
 
  //getting identifier of drawable resources and storing it into database(imageURLData2)
         //First Image
-        String agriurl="@drawable/agri";
-       int url1=getResources().getIdentifier(agriurl,null,getPackageName());
-        boolean r2=dataC.addImage(a,url1);
+
+       // String agriurl="@drawable/agri1";
+     //  int url1=getResources().getIdentifier(agriurl,null,getPackageName());
+    //    boolean r2=data.addImage(a,url1);
+
+       // String aURL="@drawable/agri1";
+       // int aURL1=getResources().getIdentifier(aURL,null,getPackageName());
+      //  boolean r2=singleData.addCategory(a,aURL1);
+
+
+
 
 
         //Second Image
@@ -147,30 +157,92 @@ public class cate extends AppCompatActivity {
        // int url2=getResources().getIdentifier(garurl,null,getPackageName());
     //  boolean r2= data3.addImage(url2);
 
+       // String gURL="@drawable/gar";
+      //  int gURL1=getResources().getIdentifier(gURL,null,getPackageName());
+      //  boolean r2=singleData.addCategory(b,gURL1);
+
+
+
+
         //Third image
         //String sparsurl="@drawable/saprs";
       //  int url3=getResources().getIdentifier(sparsurl,null,getPackageName());
      //  boolean r2= data3.addImage(url3);
 
-       // String bulidurl="@drawable/construction";
+     //   String auURL="@drawable/saprs";
+      //  int auURL1=getResources().getIdentifier(auURL,null,getPackageName());
+      //  boolean r2=singleData.addCategory(c,auURL1);
+
+
+
+      //  String surl="@drawable/saprs";
+       // int spUrl=getResources().getIdentifier(surl,null,getPackageName());
+      //  boolean r2=data.addImage(c,spUrl);
+
+
+        // String bulidurl="@drawable/construction";
        // int url4=getResources().getIdentifier(bulidurl,null,getPackageName());
       //  boolean r2=data3.addImage(url4);
+
+     //   String buiURL="@drawable/construction";
+     //   int buiURL1=getResources().getIdentifier(buiURL,null,getPackageName());
+      //  boolean r2=singleData.addCategory(d,buiURL1);
+
+
+
+       // String bUrl="@drawable/construction";
+      //  int buildUrl=getResources().getIdentifier(bUrl,null,getPackageName());
+       // boolean r2=data.addImage(d,buildUrl);
 
         //String auditurl="@drawable/audit1";
        //  int url5=getResources().getIdentifier(auditurl,null,getPackageName());
        //   boolean r2= data3.addImage(url5);
 
+
+       // String audUrl="@drawable/audit1";
+       // int aUrl=getResources().getIdentifier(audUrl,null,getPackageName());
+      //  boolean r2=data.addImage(e,aUrl);
+
+      //  String audURL="@drawable/audit1";
+      //  int audURL1=getResources().getIdentifier(audURL,null,getPackageName());
+      //  boolean r2=singleData.addCategory(e,audURL1);
+
+
       //  String iturl="@drawable/it";
       //  int url6=getResources().getIdentifier(iturl,null,getPackageName());
      //   boolean r2= data3.addImage(url6);
+
+        //String itURL="@drawable/it";
+       // int itURL1=getResources().getIdentifier(itURL,null,getPackageName());
+       // boolean r2=singleData.addCategory(f,itURL1);
+
+      //  String itUrl="@drawable/it";
+      //  int itU=getResources().getIdentifier(itUrl,null,getPackageName());
+     //   boolean r2=data.addImage(f,itU);
+
 
       //  String eduurl="@drawable/education";
      //   int url7=getResources().getIdentifier(eduurl,null,getPackageName());
     //    boolean r2= data3.addImage(url7);
 
+
+        //String eUrl="@drawable/educa";
+        //int EUrl=getResources().getIdentifier(eUrl,null,getPackageName());
+      //  boolean r2=data.addImage(g,EUrl);
+
+
       //  String eleurl="@drawable/ele";
       //  int url8=getResources().getIdentifier(eleurl,null,getPackageName());
       //  boolean r2= data3.addImage(url8);
+
+       // String eleUrl="@drawable/ele";
+      //  int elUrl=getResources().getIdentifier(eleUrl,null,getPackageName());
+       // boolean r2=data.addImage(h,elUrl);
+
+       // String elel="@drawable/ele";
+      //  int urlC8=getResources().getIdentifier(elel,null,getPackageName());
+      //  boolean r2=data.addImage(h,urlC8);
+
 
      //   String educurl="@drawable/educa";
       //  int url9=getResources().getIdentifier(educurl,null,getPackageName());
@@ -180,20 +252,41 @@ public class cate extends AppCompatActivity {
        //   int url9=getResources().getIdentifier(eleurl,null,getPackageName());
       //   boolean r2= data3.addImage(url9);
 
+      //  String itu="@drawable/it";
+      // int url10=getResources().getIdentifier(itu,null,getPackageName());
+     //   boolean r2=data.addImage(f,url10);
+
+       // String educat="@drawable/educa";
+       // int url12=getResources().getIdentifier(educat,null,getPackageName());
+       // boolean r2=data.addImage(g,url12);
+
+       // String eduURL="@drawable/educa";
+      //  int eduURL1=getResources().getIdentifier(eduURL,null,getPackageName());
+      //  boolean r2=singleData.addCategory(g,eduURL1);
+
+        //String el="@drawable/ele";
+       // int url13=getResources().getIdentifier(el,null,getPackageName());
+      //  boolean r2=data.addImage(h,url13);
+
+     //   String elURL="@drawable/ele";
+      //  int elURL1=getResources().getIdentifier(elURL,null,getPackageName());
+     //   boolean r2=singleData.addCategory(h,elURL1);
+
 
 
  //if image is inserted successfully,then display message "Data Inserted"
-   if(r2==true)
-        {
-       Toast.makeText(getApplicationContext(),"Data Inserted",Toast.LENGTH_LONG).show();
-         }
-        else
-         { Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_LONG).show();
-       }
+ //if(r2==true)
+    //  {
+    //  Toast.makeText(getApplicationContext(),"Data Inserted",Toast.LENGTH_LONG).show();
+     //  }
+    //   else
+     //   { Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_LONG).show();
+   // }
 
 
         //code to clear data in arraylist
         imgArrayInt.clear();
+        nam.clear();
 
 
         ag.setImageDrawable(null);
@@ -205,15 +298,24 @@ public class cate extends AppCompatActivity {
         edu.setImageDrawable(null);
         elec.setImageDrawable(null);
 
+        agt.setText("");
+        gart.setText("");
+        autot.setText("");
+        constt.setText("");
+        audt.setText("");
+        itt.setText("");
+        edut.setText("");
+        elect.setText("");
+
 //Retrieving image identifier from database(imageURLData2)
 
-      // Cursor c2=data3.viewImageS();
+     //  Cursor c2=data3.viewImageS();
       //  while (c2.moveToNext())
        //  {
         //   int i=c2.getInt(1);
-         //     imgArrayInt.add(i);
+          //    imgArrayInt.add(i);
 
-      //  }
+       // }
 
  //Setting images to imageview.
 
@@ -222,20 +324,45 @@ public class cate extends AppCompatActivity {
 
 
     //    Drawable res2=getResources().getDrawable(imgArrayInt.get(1));
-    //    gar.setImageDrawable(getResources().getDrawable(imgArrayInt.get(1)));
+       // gar.setImageDrawable(getResources().getDrawable(imgArrayInt.get(1)));
 
        // Drawable res3=getResources().getDrawable(imgArrayInt.get(2));
       //  auto.setImageDrawable(getResources().getDrawable(imgArrayInt.get(2)));
-      // cons.setImageDrawable(getResources().getDrawable(imgArrayInt.get(3)));
-    //  aud.setImageDrawable(getResources().getDrawable(imgArrayInt.get(4)));
-     //   it.setImageDrawable(getResources().getDrawable(imgArrayInt.get(5)));
-     //   edu.setImageDrawable(getResources().getDrawable(imgArrayInt.get(6)));
+    //   cons.setImageDrawable(getResources().getDrawable(imgArrayInt.get(3)));
+     // aud.setImageDrawable(getResources().getDrawable(imgArrayInt.get(4)));
+      //  it.setImageDrawable(getResources().getDrawable(imgArrayInt.get(5)));
+      //  edu.setImageDrawable(getResources().getDrawable(imgArrayInt.get(6)));
 
      //   elec.setImageDrawable(getResources().getDrawable(imgArrayInt.get(7)));
 
 
 
 
+//singleData.removeCategory(b);
+Cursor cData=singleData.getCategory();
+while (cData.moveToNext())
+{
+    String categoryName=cData.getString(1);
+    int categoryImage=cData.getInt(2);
+    nam.add(categoryName);
+    imgArrayInt.add(categoryImage);
+}
+ ag.setImageDrawable(getResources().getDrawable(imgArrayInt.get(0)));
+gar.setImageDrawable(getResources().getDrawable(imgArrayInt.get(1)));
+auto.setImageDrawable(getResources().getDrawable(imgArrayInt.get(2)));
+cons.setImageDrawable(getResources().getDrawable(imgArrayInt.get(3)));
+aud.setImageDrawable(getResources().getDrawable(imgArrayInt.get(4)));
+it.setImageDrawable(getResources().getDrawable(imgArrayInt.get(5)));
+edu.setImageDrawable(getResources().getDrawable(imgArrayInt.get(6)));
+elec.setImageDrawable(getResources().getDrawable(imgArrayInt.get(7)));
+agt.setText(nam.get(0));
+gart.setText(nam.get(1));
+autot.setText(nam.get(2));
+constt.setText(nam.get(3));
+audt.setText(nam.get(4));
+itt.setText(nam.get(5));
+edut.setText(nam.get(6));
+elect.setText(nam.get(7));
 
 
 
@@ -254,33 +381,29 @@ public class cate extends AppCompatActivity {
 
 
 
-        nam.clear();
-        agt.setText("");
-        gart.setText("");
-        autot.setText("");
-        constt.setText("");
-        audt.setText("");
-        itt.setText("");
-        edut.setText("");
-        elect.setText("");
 
 
-        Cursor c1 = mydb2.getdata();
 
-        while (c1.moveToNext()) {
-            String s = c1.getString(1);
-            nam.add(s);
 
-        }
 
-        agt.setText(nam.get(0));
-        gart.setText(nam.get(1));
-        autot.setText(nam.get(2));
-        constt.setText(nam.get(3));
-        audt.setText(nam.get(4));
-       itt.setText(nam.get(5));
-        edut.setText(nam.get(6));
-        elect.setText(nam.get(7));
+
+
+        //  Cursor c1 = mydb2.getdata();
+
+     //  while (c1.moveToNext()) {
+          //  String s = c1.getString(1);
+          //  nam.add(s);
+
+       // }
+
+      //  agt.setText(nam.get(0));
+     //   gart.setText(nam.get(1));
+     //   autot.setText(nam.get(2));
+     //   constt.setText(nam.get(3));
+      //  audt.setText(nam.get(4));
+      // itt.setText(nam.get(5));
+     //  edut.setText(nam.get(6));
+     //  elect.setText(nam.get(7));
 
 
 

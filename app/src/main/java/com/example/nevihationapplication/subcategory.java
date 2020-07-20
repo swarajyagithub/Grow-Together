@@ -16,6 +16,7 @@ import java.util.ArrayList;
 public class subcategory extends AppCompatActivity {
 
    subData s;
+ singleDatabase subDataIn;
 
     ArrayList<String> nam1=new ArrayList<String>();
     ArrayList<Integer> nam2=new ArrayList<Integer>();
@@ -43,6 +44,7 @@ public class subcategory extends AppCompatActivity {
         t6=findViewById(R.id.text32);
 
         s=new subData(this);
+    subDataIn=new singleDatabase(this);
 
 
         int num4=5;
@@ -52,17 +54,20 @@ public class subcategory extends AppCompatActivity {
         String b1="191 Software Development & IT Consultant";
         String c1="211 Web Development & Marketing Services";
 
-      // Boolean r1= s.insertDataS(a1,num4);
-     // Boolean r2= s.insertDataS(b1,num5);
-      // Boolean r3=s.insertDataS(c1,num6);
-        //if(r1==true)
-     //   {
-        //    Toast.makeText(getApplicationContext(),"Data Inserted",Toast.LENGTH_LONG).show();
-       // }
-      //  else
-       // {
-           // Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_LONG).show();
-      //  }
+
+
+
+       // Boolean r1=subDataIn.insertDataS(a1,num4);
+        //Boolean r1=subDataIn.insertDataS(b1,num5);
+     //   Boolean r1=subDataIn.insertDataS(c1,num6);
+      //  if(r1==true)
+      //    {
+          //  Toast.makeText(getApplicationContext(),"Data Inserted",Toast.LENGTH_LONG).show();
+       //  }
+       //   else
+       //  {
+         //Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_LONG).show();
+        //  }
 
         nam1.clear();
         nam2.clear();
@@ -73,23 +78,25 @@ public class subcategory extends AppCompatActivity {
         t5.setText("");
         t6.setText("");
 
-        Cursor rS=s.getDataS();
-        Cursor rN=s.getDataS();
-        while (rS.moveToNext())
-        {
-            String s12=rS.getString(1);
-            int i12=rS.getInt(2);
-            nam1.add(s12);
-            nam2.add(i12);
+
+
+        Cursor subN=subDataIn.getDataS();
+        while (subN.moveToNext()) {
+            String subName=subN.getString(1);
+            int subNum=subN.getInt(2);
+            nam1.add(subName);
+            nam2.add(subNum);
         }
 
 
 
 
-        t1.setText(nam1.get(0));
+
+
+       t1.setText(nam1.get(0));
         t2.setText(String.valueOf(nam2.get(0)));
-       t3.setText(nam1.get(1));
-        t4.setText(String.valueOf(nam2.get(1)));
+      t3.setText(nam1.get(1));
+       t4.setText(String.valueOf(nam2.get(1)));
         t5.setText(nam1.get(2));
         t6.setText(String.valueOf(nam2.get(2)));
 

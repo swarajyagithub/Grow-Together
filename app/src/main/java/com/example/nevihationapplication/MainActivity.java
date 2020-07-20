@@ -20,6 +20,7 @@ import static android.provider.AlarmClock.EXTRA_MESSAGE;
 public class MainActivity extends AppCompatActivity {
 
     database mydb;
+    singleDatabase dataS;
 
     EditText firstName;
     EditText lastName;
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         mydb = new database(this);
+        dataS=new singleDatabase(this);
 
         firstName = findViewById(R.id.first);
         lastName = findViewById(R.id.last);
@@ -55,28 +57,66 @@ public class MainActivity extends AppCompatActivity {
                 String pas = pass.getEditText().getText().toString();
                 String conPas = conPassw.getEditText().getText().toString();
 
-                if (fname.equals("") || lmame.equals("") || em.equals("") || pas.equals("") || conPas.equals("") == true) {
-                    Toast.makeText(getApplicationContext(), "Please enter all details.", Toast.LENGTH_SHORT).show();
-                } else
-                {
-                    if (pas.equals(conPas)) {
-                        Boolean b = mydb.checkMail(em);
-                        if (b == false) {
-                            emailAd.setError("Email already exixts.");
-                        } else {
-                            mydb.insertData(fname, lmame, em, pas);
+
+//Original Code:
+             //   if (fname.equals("") || lmame.equals("") || em.equals("") || pas.equals("") || conPas.equals("") == true) {
+                  //  Toast.makeText(getApplicationContext(), "Please enter all details.", Toast.LENGTH_SHORT).show();
+            //    } else
+            //    {
+                  //  if (pas.equals(conPas)) {
+                    //    Boolean b = mydb.checkMail(em);
+                     //   if (b == false) {
+                         //   emailAd.setError("Email already exixts.");
+                      //  } else {
+                          //  mydb.insertData(fname, lmame, em, pas);
                            //Intent intent = new Intent(MainActivity.this, NevigationDraw.class);
                             //startActivity(intent);
-                            Toast.makeText(getApplicationContext(), "You have successfully registered.", Toast.LENGTH_LONG).show();
-                        }
+                          //  Toast.makeText(getApplicationContext(), "You have successfully registered.", Toast.LENGTH_LONG).show();
+                     //   }
 
 
+                  //  } else
+                  //  {
+                     //   conPassw.setError("Password doesn't match");
+                  //  }
+              //  }
+
+
+
+                   if (fname.equals("") || lmame.equals("") || em.equals("") || pas.equals("") || conPas.equals("") == true) {
+                  Toast.makeText(getApplicationContext(), "Please enter all details.", Toast.LENGTH_SHORT).show();
                     } else
                     {
-                        conPassw.setError("Password doesn't match");
-                    }
-                }
+                  if (pas.equals(conPas)) {
+                    Boolean b = dataS.checkMail(em);
+                   if (b == false) {
+                   emailAd.setError("Email already exixts.");
+                  } else {
+                       dataS.insertUserData(fname,lmame,em,pas);
+
+                  Toast.makeText(getApplicationContext(), "You have successfully registered.", Toast.LENGTH_LONG).show();
+                   }
+
+
+                  } else
+                  {
+                   conPassw.setError("Password doesn't match");
+                 }
+                  }
+
+
+
+
+
+
+
+
+
+
+
+
             }
+
         });
 
         getSupportActionBar().setDisplayShowHomeEnabled(true);
