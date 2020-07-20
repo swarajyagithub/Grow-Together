@@ -30,8 +30,7 @@ import android.widget.GridView;
 import android.widget.ImageView;
 
 
-import android.support.v7.widget.SearchView;
-import android.widget.SearchView.OnQueryTextListener;
+
 
 import android.widget.TextView;
 import android.widget.Toast;
@@ -48,7 +47,7 @@ public class cate extends AppCompatActivity {
     CardView cardView;
     //EditText edit;
     GridView gridView;
-   SearchView searchView;
+  // SearchView searchView;
 
 
 
@@ -113,7 +112,7 @@ public class cate extends AppCompatActivity {
         elect = findViewById(R.id.eleT);
 
        // edit=findViewById(R.id.t);
-       searchView=findViewById(R.id.search);
+    //  searchView=findViewById(R.id.search);
       //  gridView=findViewById(R.id.gridview);
 
 
