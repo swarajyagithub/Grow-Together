@@ -73,7 +73,7 @@ public class NevigationDraw extends AppCompatActivity implements NavigationView.
             @Override
             public void onClick(View v) {
 
-                Intent in=new Intent(NevigationDraw.this, cate.class);
+                Intent in=new Intent(NevigationDraw.this, searchbox.class);
                 startActivity(in);
             }
         });
