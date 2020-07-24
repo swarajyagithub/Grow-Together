@@ -194,7 +194,7 @@ public class searchbox extends AppCompatActivity {
                    String IT = "Computer & IT Solutions";
                    if(IT.equals(itemModelFiltered.get(position).getName()))
                        {
-                           Intent intent=new Intent(searchbox.this,subcategory.class);
+                           Intent intent=new Intent(searchbox.this,subCateSearch.class);
                            startActivity(intent);
                        }
 
