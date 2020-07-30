@@ -1,21 +1,20 @@
 package com.example.nevihationapplication;
 
-import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Patterns;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import java.util.regex.Pattern;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -28,6 +27,9 @@ public class MainActivity extends AppCompatActivity {
     TextInputLayout pass;
     TextInputLayout conPassw;
     Button sing;
+
+    private FirebaseAuth firebaseAuth;
+
 
 
 
@@ -47,6 +49,27 @@ public class MainActivity extends AppCompatActivity {
         conPassw = findViewById(R.id.text_con_password);
         sing = findViewById(R.id.signUp);
 
+
+        firebaseAuth=FirebaseAuth.getInstance();
+
+        firebaseAuth.createUserWithEmailAndPassword("om@gmail.com","123456").addOnCompleteListener(this
+                , new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        if(task.isSuccessful())
+                        {
+                            Toast.makeText(getApplicationContext(),"Successfully Registred!!!",Toast.LENGTH_LONG).show();
+                            // updateUI(user);
+                        }
+                        else {
+                            Toast.makeText(getApplicationContext(),"Registration Failed!!!",Toast.LENGTH_LONG).show();
+                        }
+
+                    }
+                });
+
+
+
         sing.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -58,51 +81,30 @@ public class MainActivity extends AppCompatActivity {
                 String conPas = conPassw.getEditText().getText().toString();
 
 
-//Original Code:
-             //   if (fname.equals("") || lmame.equals("") || em.equals("") || pas.equals("") || conPas.equals("") == true) {
-                  //  Toast.makeText(getApplicationContext(), "Please enter all details.", Toast.LENGTH_SHORT).show();
-            //    } else
-            //    {
-                  //  if (pas.equals(conPas)) {
-                    //    Boolean b = mydb.checkMail(em);
-                     //   if (b == false) {
-                         //   emailAd.setError("Email already exixts.");
-                      //  } else {
-                          //  mydb.insertData(fname, lmame, em, pas);
-                           //Intent intent = new Intent(MainActivity.this, NevigationDraw.class);
-                            //startActivity(intent);
-                          //  Toast.makeText(getApplicationContext(), "You have successfully registered.", Toast.LENGTH_LONG).show();
-                     //   }
 
 
+
+                  // if (fname.equals("") || lmame.equals("") || em.equals("") || pas.equals("") || conPas.equals("") == true) {
+                //  Toast.makeText(getApplicationContext(), "Please enter all details.", Toast.LENGTH_SHORT).show();
                   //  } else
                   //  {
-                     //   conPassw.setError("Password doesn't match");
-                  //  }
-              //  }
+                 // if (pas.equals(conPas)) {
+                   // Boolean b = dataS.checkMail(em);
+                  // if (b == false) {
+                 //  emailAd.setError("Email already exixts.");
+                //  } else {
+                    //   dataS.insertUserData(fname,lmame,em,pas);
+
+                 // Toast.makeText(getApplicationContext(), "You have successfully registered.", Toast.LENGTH_LONG).show();
+                 //  }
 
 
+               //   } else
+                //  {
+                  // conPassw.setError("Password doesn't match");
+               //  }
+                 // }
 
-                   if (fname.equals("") || lmame.equals("") || em.equals("") || pas.equals("") || conPas.equals("") == true) {
-                  Toast.makeText(getApplicationContext(), "Please enter all details.", Toast.LENGTH_SHORT).show();
-                    } else
-                    {
-                  if (pas.equals(conPas)) {
-                    Boolean b = dataS.checkMail(em);
-                   if (b == false) {
-                   emailAd.setError("Email already exixts.");
-                  } else {
-                       dataS.insertUserData(fname,lmame,em,pas);
-
-                  Toast.makeText(getApplicationContext(), "You have successfully registered.", Toast.LENGTH_LONG).show();
-                   }
-
-
-                  } else
-                  {
-                   conPassw.setError("Password doesn't match");
-                 }
-                  }
 
 
 
@@ -119,10 +121,16 @@ public class MainActivity extends AppCompatActivity {
 
         });
 
+
+
+
+
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
+
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id=item.getItemId();
