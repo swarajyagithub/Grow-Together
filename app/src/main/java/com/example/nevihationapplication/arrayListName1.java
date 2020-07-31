@@ -1,11 +1,9 @@
 package com.example.nevihationapplication;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.support.annotation.Nullable;
 
 public class arrayListName1 extends SQLiteOpenHelper {
     public static final String databaseName = "category";

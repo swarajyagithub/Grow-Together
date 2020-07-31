@@ -1,53 +1,34 @@
 package com.example.nevihationapplication;
 
-import android.annotation.SuppressLint;
-import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.drawable.Drawable;
-import android.net.Uri;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Base64;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.BaseAdapter;
 import android.widget.EditText;
-import android.widget.Filter;
-import android.widget.Filterable;
 import android.widget.GridView;
 import android.widget.ImageView;
-
-
-
-
+import android.widget.SearchView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.io.ByteArrayOutputStream;
-import java.io.OutputStream;
-import java.time.Instant;
-import java.time.temporal.TemporalAdjuster;
 import java.util.ArrayList;
-import java.util.List;
+
+//import android.support.v7.widget.SearchView;
 
 public class cate extends AppCompatActivity {
 
     CardView cardView;
-    //EditText edit;
+    EditText edit;
     GridView gridView;
   // SearchView searchView;
+   SearchView search1;
 
 
 
@@ -111,9 +92,11 @@ public class cate extends AppCompatActivity {
         edut = findViewById(R.id.educationT);
         elect = findViewById(R.id.eleT);
 
-       // edit=findViewById(R.id.t);
-    //  searchView=findViewById(R.id.search);
+        edit=findViewById(R.id.t);
+   //  searchView=findViewById(R.id.search);
       //  gridView=findViewById(R.id.gridview);
+
+        search1=(SearchView)findViewById(R.id.search);
 
 
 
@@ -139,133 +122,44 @@ public class cate extends AppCompatActivity {
  //getting identifier of drawable resources and storing it into database(imageURLData2)
         //First Image
 
-       // String agriurl="@drawable/agri1";
-     //  int url1=getResources().getIdentifier(agriurl,null,getPackageName());
-    //    boolean r2=data.addImage(a,url1);
 
        // String aURL="@drawable/agri1";
        // int aURL1=getResources().getIdentifier(aURL,null,getPackageName());
       //  boolean r2=singleData.addCategory(a,aURL1);
 
 
-
-
-
-        //Second Image
-       // String garurl="@drawable/gar";
-       // int url2=getResources().getIdentifier(garurl,null,getPackageName());
-    //  boolean r2= data3.addImage(url2);
-
        // String gURL="@drawable/gar";
       //  int gURL1=getResources().getIdentifier(gURL,null,getPackageName());
       //  boolean r2=singleData.addCategory(b,gURL1);
 
-
-
-
-        //Third image
-        //String sparsurl="@drawable/saprs";
-      //  int url3=getResources().getIdentifier(sparsurl,null,getPackageName());
-     //  boolean r2= data3.addImage(url3);
 
      //   String auURL="@drawable/saprs";
       //  int auURL1=getResources().getIdentifier(auURL,null,getPackageName());
       //  boolean r2=singleData.addCategory(c,auURL1);
 
 
-
-      //  String surl="@drawable/saprs";
-       // int spUrl=getResources().getIdentifier(surl,null,getPackageName());
-      //  boolean r2=data.addImage(c,spUrl);
-
-
-        // String bulidurl="@drawable/construction";
-       // int url4=getResources().getIdentifier(bulidurl,null,getPackageName());
-      //  boolean r2=data3.addImage(url4);
-
      //   String buiURL="@drawable/construction";
      //   int buiURL1=getResources().getIdentifier(buiURL,null,getPackageName());
       //  boolean r2=singleData.addCategory(d,buiURL1);
 
-
-
-       // String bUrl="@drawable/construction";
-      //  int buildUrl=getResources().getIdentifier(bUrl,null,getPackageName());
-       // boolean r2=data.addImage(d,buildUrl);
-
-        //String auditurl="@drawable/audit1";
-       //  int url5=getResources().getIdentifier(auditurl,null,getPackageName());
-       //   boolean r2= data3.addImage(url5);
-
-
-       // String audUrl="@drawable/audit1";
-       // int aUrl=getResources().getIdentifier(audUrl,null,getPackageName());
-      //  boolean r2=data.addImage(e,aUrl);
 
       //  String audURL="@drawable/audit1";
       //  int audURL1=getResources().getIdentifier(audURL,null,getPackageName());
       //  boolean r2=singleData.addCategory(e,audURL1);
 
 
-      //  String iturl="@drawable/it";
-      //  int url6=getResources().getIdentifier(iturl,null,getPackageName());
-     //   boolean r2= data3.addImage(url6);
 
         //String itURL="@drawable/it";
        // int itURL1=getResources().getIdentifier(itURL,null,getPackageName());
        // boolean r2=singleData.addCategory(f,itURL1);
 
-      //  String itUrl="@drawable/it";
-      //  int itU=getResources().getIdentifier(itUrl,null,getPackageName());
-     //   boolean r2=data.addImage(f,itU);
 
-
-      //  String eduurl="@drawable/education";
-     //   int url7=getResources().getIdentifier(eduurl,null,getPackageName());
-    //    boolean r2= data3.addImage(url7);
-
-
-        //String eUrl="@drawable/educa";
-        //int EUrl=getResources().getIdentifier(eUrl,null,getPackageName());
-      //  boolean r2=data.addImage(g,EUrl);
-
-
-      //  String eleurl="@drawable/ele";
-      //  int url8=getResources().getIdentifier(eleurl,null,getPackageName());
-      //  boolean r2= data3.addImage(url8);
-
-       // String eleUrl="@drawable/ele";
-      //  int elUrl=getResources().getIdentifier(eleUrl,null,getPackageName());
-       // boolean r2=data.addImage(h,elUrl);
-
-       // String elel="@drawable/ele";
-      //  int urlC8=getResources().getIdentifier(elel,null,getPackageName());
-      //  boolean r2=data.addImage(h,urlC8);
-
-
-     //   String educurl="@drawable/educa";
-      //  int url9=getResources().getIdentifier(educurl,null,getPackageName());
-     //   boolean r2= data3.addImage(url9);
-
-      //   String eleurl="@drawable/ele";
-       //   int url9=getResources().getIdentifier(eleurl,null,getPackageName());
-      //   boolean r2= data3.addImage(url9);
-
-      //  String itu="@drawable/it";
-      // int url10=getResources().getIdentifier(itu,null,getPackageName());
-     //   boolean r2=data.addImage(f,url10);
-
-       // String educat="@drawable/educa";
-       // int url12=getResources().getIdentifier(educat,null,getPackageName());
-       // boolean r2=data.addImage(g,url12);
 
        // String eduURL="@drawable/educa";
       //  int eduURL1=getResources().getIdentifier(eduURL,null,getPackageName());
       //  boolean r2=singleData.addCategory(g,eduURL1);
 
-        //String el="@drawable/ele";
-       // int url13=getResources().getIdentifier(el,null,getPackageName());
-      //  boolean r2=data.addImage(h,url13);
+
 
      //   String elURL="@drawable/ele";
       //  int elURL1=getResources().getIdentifier(elURL,null,getPackageName());
@@ -306,34 +200,6 @@ public class cate extends AppCompatActivity {
         edut.setText("");
         elect.setText("");
 
-//Retrieving image identifier from database(imageURLData2)
-
-     //  Cursor c2=data3.viewImageS();
-      //  while (c2.moveToNext())
-       //  {
-        //   int i=c2.getInt(1);
-          //    imgArrayInt.add(i);
-
-       // }
-
- //Setting images to imageview.
-
-       // Drawable res1=getResources().getDrawable(imgArrayInt.get(0));
-    //  ag.setImageDrawable(getResources().getDrawable(imgArrayInt.get(0)));
-
-
-    //    Drawable res2=getResources().getDrawable(imgArrayInt.get(1));
-       // gar.setImageDrawable(getResources().getDrawable(imgArrayInt.get(1)));
-
-       // Drawable res3=getResources().getDrawable(imgArrayInt.get(2));
-      //  auto.setImageDrawable(getResources().getDrawable(imgArrayInt.get(2)));
-    //   cons.setImageDrawable(getResources().getDrawable(imgArrayInt.get(3)));
-     // aud.setImageDrawable(getResources().getDrawable(imgArrayInt.get(4)));
-      //  it.setImageDrawable(getResources().getDrawable(imgArrayInt.get(5)));
-      //  edu.setImageDrawable(getResources().getDrawable(imgArrayInt.get(6)));
-
-     //   elec.setImageDrawable(getResources().getDrawable(imgArrayInt.get(7)));
-
 
 
 
@@ -363,20 +229,42 @@ itt.setText(nam.get(5));
 edut.setText(nam.get(6));
 elect.setText(nam.get(7));
 
+ edit.addTextChangedListener(new TextWatcher() {
+     @Override
+     public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+     }
+
+     @Override
+     public void onTextChanged(CharSequence s, int start, int before, int count) {
+
+     }
+
+     @Override
+     public void afterTextChanged(Editable s) {
+
+     }
+ });
+
+
+
+ search1.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+     @Override
+     public boolean onQueryTextSubmit(String query) {
+         return false;
+     }
+
+     @Override
+     public boolean onQueryTextChange(String newText) {
+         return false;
+     }
+ });
 
 
 
 
 
 
-      //  mydb2.insertData(a);
-    //    mydb2.insertData(b);
-      //  mydb2.insertData(c);
-     //   mydb2.insertData(d);
-      //  mydb2.insertData(e);
-     //   mydb2.insertData(f);
-     //   mydb2.insertData(g);
-     //   mydb2.insertData(h);
 
 
 
@@ -387,22 +275,12 @@ elect.setText(nam.get(7));
 
 
 
-        //  Cursor c1 = mydb2.getdata();
 
-     //  while (c1.moveToNext()) {
-          //  String s = c1.getString(1);
-          //  nam.add(s);
 
-       // }
 
-      //  agt.setText(nam.get(0));
-     //   gart.setText(nam.get(1));
-     //   autot.setText(nam.get(2));
-     //   constt.setText(nam.get(3));
-      //  audt.setText(nam.get(4));
-      // itt.setText(nam.get(5));
-     //  edut.setText(nam.get(6));
-     //  elect.setText(nam.get(7));
+
+
+
 
 
 
@@ -422,9 +300,9 @@ elect.setText(nam.get(7));
 
 
 
-
-
     }
+
+
 
 
 
@@ -445,13 +323,8 @@ elect.setText(nam.get(7));
 
         return super.onOptionsItemSelected(item);
 
+
     }
-
-
-
-
-
-
 
 
 

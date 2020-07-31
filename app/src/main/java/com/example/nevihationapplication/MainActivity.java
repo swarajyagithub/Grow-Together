@@ -8,11 +8,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.Toast;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 
@@ -29,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     Button sing;
 
     private FirebaseAuth firebaseAuth;
+    Button s;
 
 
 
@@ -52,21 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
         firebaseAuth=FirebaseAuth.getInstance();
 
-        firebaseAuth.createUserWithEmailAndPassword("om@gmail.com","123456").addOnCompleteListener(this
-                , new OnCompleteListener<AuthResult>() {
-                    @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        if(task.isSuccessful())
-                        {
-                            Toast.makeText(getApplicationContext(),"Successfully Registred!!!",Toast.LENGTH_LONG).show();
-                            // updateUI(user);
-                        }
-                        else {
-                            Toast.makeText(getApplicationContext(),"Registration Failed!!!",Toast.LENGTH_LONG).show();
-                        }
-
-                    }
-                });
 
 
 
