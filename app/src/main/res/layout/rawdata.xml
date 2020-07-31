@@ -19,7 +19,7 @@
            android:id="@+id/img"
            android:layout_below="@+id/search1"
            android:layout_gravity="center"
-           android:src="@drawable/it"
+           android:src="@drawable/agri1"
 
            />
        <TextView
