@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.support.annotation.Nullable;
 
 public class singleDatabase extends SQLiteOpenHelper {
     public static final String databaseName1 = "UserInformationDatabase";
@@ -25,6 +24,12 @@ public class singleDatabase extends SQLiteOpenHelper {
     public static final String col_1S = "ID";
     public static final String col_2S = " NAME";
     public static final String cal_3S = "NUMB";
+
+//Agriculture and Farming
+    public static final String tableNameA = "agriData";
+    public static final String col_1A = "ID";
+    public static final String col_2A = " NAME";
+    public static final String col_3A = "NUMB";
     public singleDatabase( Context context) {
 
         super(context, databaseName1, null, 1);
@@ -35,6 +40,7 @@ public class singleDatabase extends SQLiteOpenHelper {
         db.execSQL("create table " + tableNameU + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,SURNAME TEXT,EMAIL TEXT,PASSWORD TEXT)");
         db.execSQL("create table " + tableNameC + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,IMAGE INTEGER)");
         db.execSQL("create table " + tableNameS + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,NUMB INTEGER)");
+        db.execSQL("create table " + tableNameA + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,NUMB INTEGER)");
 
     }
 
@@ -43,6 +49,7 @@ public class singleDatabase extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + tableNameU);
         db.execSQL("DROP TABLE IF EXISTS " + tableNameC);
         db.execSQL("DROP TABLE IF EXISTS " + tableNameS);
+        db.execSQL("DROP TABLE IF EXISTS " +tableNameA);
         onCreate(db);
 
 
@@ -132,5 +139,34 @@ public class singleDatabase extends SQLiteOpenHelper {
     {
         SQLiteDatabase db=this.getReadableDatabase();
         db.execSQL("Delete  from "+tableNameC+" where NAME=?",new String[]{NAME});
+    }
+
+    public void removeSubCatData(String NAME)
+    {
+        SQLiteDatabase db=this.getReadableDatabase();
+        db.execSQL("Delete from "+tableNameS+" where NAME=?",new String[]{NAME});
+    }
+
+//insert data(agriculture) into agriData table
+    public boolean insertDataAgri(String name, int numb) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col_2A, name);
+        contentValues.put(col_3A, numb);
+
+        long result = db.insert(tableNameA, null, contentValues);
+        if (result == -1)
+            return false;
+        else
+            return true;
+    }
+
+
+
+    public Cursor getDataAgri()
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("select * from "+tableNameA,null);
+        return res;
     }
 }

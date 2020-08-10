@@ -2,4 +2,19 @@
     <string name="app_name"></string>
     <string name="open">Open</string>
     <string name="close">Close</string>
+    <string name="send">Send Enquiry</string>
+
+    <string-array name="City_Names">
+        <item>All Cities</item>
+        <item>Ahmedabad</item>
+        <item>Australia</item>
+        <item>Balotra</item>
+        <item>Bangalor</item>
+        <item>Bhandup</item>
+        <item>Bhavnagar</item>
+        <item>Bhopal</item>
+        <item>Chennai</item>
+        <item>Delhi</item>
+        <item>Ernakulam</item>
+    </string-array>
 </resources>
