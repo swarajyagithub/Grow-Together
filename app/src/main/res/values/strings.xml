@@ -3,6 +3,8 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
     <string name="send">Send Enquiry</string>
+    <string name="bird">Birds Seeds, Poultry &amp; Animal Food</string>
+    <string name="computer">Computer &amp; IT Solutions</string>
 
     <string-array name="City_Names">
         <item>All Cities</item>

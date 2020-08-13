@@ -13,7 +13,8 @@
         android:layout_below="@+id/subSearch"
         android:layout_margin="8dp"
         android:horizontalSpacing="16dp"
-        android:numColumns="1"/>
+        android:numColumns="1"
+        />
 
     <SearchView
         android:layout_width="390dp"

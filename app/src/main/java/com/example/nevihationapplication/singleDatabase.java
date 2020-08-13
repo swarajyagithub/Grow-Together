@@ -30,9 +30,21 @@ public class singleDatabase extends SQLiteOpenHelper {
     public static final String col_1A = "ID";
     public static final String col_2A = " NAME";
     public static final String col_3A = "NUMB";
+
+    public static final String tableNameB = "birdsData";
+    public static final String col_1B = "ID";
+    public static final String col_2B = " NAME1";
+    public static final String col_3B = "NAME2";
+    public static final String col_4B = "NAME3";
+    public static final String col_5B = " NAME4";
+    public static final String col_6B = "IMAGE";
+
+
+
+
     public singleDatabase( Context context) {
 
-        super(context, databaseName1, null, 1);
+        super(context, databaseName1, null, 3);
     }
 
     @Override
@@ -41,6 +53,10 @@ public class singleDatabase extends SQLiteOpenHelper {
         db.execSQL("create table " + tableNameC + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,IMAGE INTEGER)");
         db.execSQL("create table " + tableNameS + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,NUMB INTEGER)");
         db.execSQL("create table " + tableNameA + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,NUMB INTEGER)");
+        db.execSQL("create table " + tableNameB + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME1 TEXT,NAME2 TEXT,NAME3 TEXT,NAME4 TEXT,IMAGE INTEGER)");
+
+
+
 
     }
 
@@ -50,10 +66,15 @@ public class singleDatabase extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + tableNameC);
         db.execSQL("DROP TABLE IF EXISTS " + tableNameS);
         db.execSQL("DROP TABLE IF EXISTS " +tableNameA);
+        db.execSQL("DROP TABLE IF EXISTS " +tableNameB);
+
+
         onCreate(db);
 
 
     }
+
+
     public boolean insertUserData(String name, String surname, String email, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -147,6 +168,13 @@ public class singleDatabase extends SQLiteOpenHelper {
         db.execSQL("Delete from "+tableNameS+" where NAME=?",new String[]{NAME});
     }
 
+
+    public void removeAgriData(String NAME)
+    {
+        SQLiteDatabase db=this.getReadableDatabase();
+        db.execSQL("Delete from "+tableNameA+" where NAME=?",new String[]{NAME});
+    }
+
 //insert data(agriculture) into agriData table
     public boolean insertDataAgri(String name, int numb) {
         SQLiteDatabase db = this.getWritableDatabase();
@@ -168,5 +196,34 @@ public class singleDatabase extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor res = db.rawQuery("select * from "+tableNameA,null);
         return res;
+    }
+
+    public boolean insertDataB(String name1, String name2, String name3, String nmae4, int img) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col_2B, name1);
+        contentValues.put(col_3B, name2);
+        contentValues.put(col_4B, name3);
+        contentValues.put(col_5B, nmae4);
+        contentValues.put(col_6B,img);
+
+        long result = db.insert(tableNameB, null, contentValues);
+        if (result == -1)
+            return false;
+        else
+            return true;
+    }
+
+    public Cursor getDataBrd()
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("select * from "+tableNameB,null);
+        return res;
+    }
+
+    public void removeBirdData(String NAME)
+    {
+        SQLiteDatabase db=this.getReadableDatabase();
+        db.execSQL("Delete from "+tableNameB+" where NAME1=?",new String[]{NAME});
     }
 }

@@ -3,22 +3,20 @@ package com.example.nevihationapplication;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.CardView;
-import android.widget.SearchView;
-
-import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
-import android.widget.CursorAdapter;
 import android.widget.Filter;
 import android.widget.Filterable;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.SearchView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -33,7 +31,7 @@ public class searchbox extends AppCompatActivity {
 
 
 
-   singleDatabase datadb;
+    singleDatabase datadb;
     ArrayList<String> arrayName=new ArrayList<String>();
     ArrayList<Integer> arrayImg=new ArrayList<Integer>();
 
@@ -68,58 +66,58 @@ public class searchbox extends AppCompatActivity {
         //getting identifier of drawable resources and storing it into database(imageURLData2)
         //First Image
 
-        // String aURL="@drawable/agri1";
-        // int aURL1=getResources().getIdentifier(aURL,null,getPackageName());
-        //  boolean r2=datadb.addCategory(a,aURL1);
+         String aURL="@drawable/agri1";
+        int aURL1=getResources().getIdentifier(aURL,null,getPackageName());
+         // boolean r2=datadb.addCategory(a,aURL1);
 
-        // String gURL="@drawable/gar";
-        //  int gURL1=getResources().getIdentifier(gURL,null,getPackageName());
+         String gURL="@drawable/gar";
+          int gURL1=getResources().getIdentifier(gURL,null,getPackageName());
         //  boolean r2=datadb.addCategory(b,gURL1);
 
-        //   String auURL="@drawable/saprs";
-        //  int auURL1=getResources().getIdentifier(auURL,null,getPackageName());
+           String auURL="@drawable/saprs";
+          int auURL1=getResources().getIdentifier(auURL,null,getPackageName());
         //  boolean r2=datadb.addCategory(c,auURL1);
 
-        //   String buiURL="@drawable/construction";
-        //   int buiURL1=getResources().getIdentifier(buiURL,null,getPackageName());
-        //  boolean r2=datadb.addCategory(d,buiURL1);
+          String buiURL="@drawable/construction";
+          int buiURL1=getResources().getIdentifier(buiURL,null,getPackageName());
+      //    boolean r2=datadb.addCategory(d,buiURL1);
 
-        //  String audURL="@drawable/audit1";
-        //  int audURL1=getResources().getIdentifier(audURL,null,getPackageName());
-        //  boolean r2=datadb.addCategory(e,audURL1);
+         String audURL="@drawable/audit1";
+          int audURL1=getResources().getIdentifier(audURL,null,getPackageName());
+         // boolean r2=datadb.addCategory(e,audURL1);
 
-        //String itURL="@drawable/it";
-        // int itURL1=getResources().getIdentifier(itURL,null,getPackageName());
+        String itURL="@drawable/it";
+         int itURL1=getResources().getIdentifier(itURL,null,getPackageName());
         // boolean r2=datadb.addCategory(f,itURL1);
 
-        // String eduURL="@drawable/educa";
-        //  int eduURL1=getResources().getIdentifier(eduURL,null,getPackageName());
+         String eduURL="@drawable/educa";
+          int eduURL1=getResources().getIdentifier(eduURL,null,getPackageName());
         //  boolean r2=datadb.addCategory(g,eduURL1);
 
-        //   String elURL="@drawable/ele";
-        //  int elURL1=getResources().getIdentifier(elURL,null,getPackageName());
-        //   boolean r2=datadb.addCategory(h,elURL1);
+           String elURL="@drawable/ele";
+          int elURL1=getResources().getIdentifier(elURL,null,getPackageName());
+          // boolean r2=datadb.addCategory(h,elURL1);
 
 
 
         //if image is inserted successfully,then display message "Data Inserted"
-        //if(r2==true)
-        //  {
-        //  Toast.makeText(getApplicationContext(),"Data Inserted",Toast.LENGTH_LONG).show();
-        //  }
-        //   else
-        //   { Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_LONG).show();
-        // }
+       // if(r2==true)
+         // {
+       //  Toast.makeText(getApplicationContext(),"Data Inserted",Toast.LENGTH_LONG).show();
+      //    }
+      //     else
+      //     { Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_LONG).show();
+      //   }
 
-
+//datadb.removeCategory(h);
 
         Cursor cData=datadb.getCategory();
         while (cData.moveToNext())
         {
             String categoryName=cData.getString(1);
             int categoryImage=cData.getInt(2);
-           arrayName.add(categoryName);
-           arrayImg.add(categoryImage);
+            arrayName.add(categoryName);
+            arrayImg.add(categoryImage);
         }
 
         List<ItemModel> itemModelList=new ArrayList<>();
@@ -188,18 +186,18 @@ public class searchbox extends AppCompatActivity {
             imageView.setImageResource(itemModelFiltered.get(position).getImage());
             textView.setText(itemModelFiltered.get(position).getName());
 
-           view.setOnClickListener(new View.OnClickListener() {
-               @Override
-               public void onClick(View v) {
-                   String IT = "Computer & IT Solutions";
-                   if(IT.equals(itemModelFiltered.get(position).getName()))
-                       {
-                           Intent intent=new Intent(searchbox.this,subCateSearch.class);
-                           startActivity(intent);
-                       }
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    String IT = "Computer & IT Solutions";
+                    if(IT.equals(itemModelFiltered.get(position).getName()))
+                    {
+                        Intent intent=new Intent(searchbox.this,subCateSearch.class);
+                        startActivity(intent);
+                    }
 
-               }
-           });
+                }
+            });
             return view;
         }
 
@@ -250,16 +248,33 @@ public class searchbox extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        int id=item.getItemId();
-        if(id==android.R.id.home)
+        //int id=item.getItemId();
+       // if(id==android.R.id.home)
+      //  {
+       //     this.finish();
+      //  }
+
+        switch (item.getItemId())
         {
-            this.finish();
+            case android.R.id.home:
+                this.finish();
+            case R.id.filter:
+                Intent in=new Intent(searchbox.this,categoryAdvSearch.class);
+                startActivity(in);
         }
 
         return super.onOptionsItemSelected(item);
 
 
     }
+
+     @Override
+      public boolean onCreateOptionsMenu(Menu menu) {
+       MenuInflater inflater=getMenuInflater();
+       inflater.inflate(R.menu.filtericon,menu);
+
+       return true;
+     }
 
 
 

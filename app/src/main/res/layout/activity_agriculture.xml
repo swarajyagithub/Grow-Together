@@ -6,51 +6,24 @@
     android:layout_height="match_parent"
     tools:context=".agriculture">
 
-    <TextView
-        android:layout_width="330dp"
-        android:layout_height="35dp"
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gridAgri"
+        android:layout_below="@+id/agriSearch"
+        android:layout_margin="8dp"
+        android:horizontalSpacing="16dp"
+        android:numColumns="1"
+        />
+    <SearchView
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/agriSearch"
         android:layout_marginTop="4dp"
-
-        android:id="@+id/txt1A"/>
-    <TextView
-        android:id="@+id/txt2A"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="4dp"
-        android:layout_marginLeft="340dp"
-        android:paddingTop="6dp"
-        android:textAlignment="center"
-        android:background="@drawable/circle"/>
-    <TextView
-        android:layout_width="330dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="100dp"
-
-        android:id="@+id/txt3A"/>
-    <TextView
-        android:id="@+id/txt4A"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginLeft="340dp"
-        android:paddingTop="6dp"
-        android:textAlignment="center"
-        android:background="@drawable/circle"/>
-    <TextView
-        android:layout_width="330dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="200dp"
-        android:id="@+id/txt5A"/>
-    <TextView
-        android:id="@+id/txt6A"
-        android:layout_width="35dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginLeft="340dp"
-        android:paddingTop="6dp"
-        android:textAlignment="center"
-
-        android:background="@drawable/circle"/>
+        android:background="@drawable/edittextrounded"
+        android:queryHint="Sub Category Search..."
+        android:iconifiedByDefault="false"
+        android:layout_alignParentTop="true"/>
 
 
 

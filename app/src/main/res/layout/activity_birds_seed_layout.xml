@@ -4,32 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".searchbox">
+    tools:context=".birds_seed_layout">
 
-
-
-   
     <GridView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/grid"
-        android:layout_below="@+id/sv"
+        android:id="@+id/gridBird"
+        android:layout_below="@+id/birdSearch"
         android:layout_margin="8dp"
-        android:horizontalSpacing="6dp"
-        android:verticalSpacing="6dp"
-        android:numColumns="2"/>
-    
+        android:verticalSpacing="7dp"
+        android:numColumns="1"
+        />
     <SearchView
         android:layout_width="390dp"
         android:layout_height="wrap_content"
-        android:id="@+id/sv"
-        android:layout_marginTop="5dp"
+        android:id="@+id/birdSearch"
+        android:layout_marginTop="4dp"
         android:background="@drawable/edittextrounded"
-        android:queryHint="Category Search..."
+        android:queryHint="Sub Category Search..."
         android:iconifiedByDefault="false"
         android:layout_alignParentTop="true"/>
-
-
-
 
 </RelativeLayout>

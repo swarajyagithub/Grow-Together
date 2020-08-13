@@ -15,10 +15,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:replace="android:appComponentFactory">
+        <activity android:name=".birds_seed_layout"
+            android:label="@string/bird">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".productdescription"
-            android:label="Product Description"
-            >
+            android:label="Product Description">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -78,7 +85,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".subCateSearch">
+        <activity android:name=".subCateSearch"
+            android:label="@string/computer">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
