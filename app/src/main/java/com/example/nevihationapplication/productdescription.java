@@ -1,16 +1,19 @@
 package com.example.nevihationapplication;
 
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
-public class  productdescription extends AppCompatActivity {
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+public class  productdescription extends AppCompatActivity implements dialogBox.ExampleDailogListner {
 
 
 Button senden;
+singleDatabase diadata;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +21,8 @@ Button senden;
         setContentView(R.layout.activity_productdescription);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        diadata=new singleDatabase(this);
 
         senden=findViewById(R.id.sendenq);
 
@@ -48,4 +53,15 @@ Button senden;
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void applyText(String Enquiry, String Name, int Mobile, String email) {
+      boolean r2=diadata.insertDataDialog(Enquiry,Name,Mobile,email);
+          if(r2==true)
+            {
+            Toast.makeText(getApplicationContext(),"Sent Enquiry",Toast.LENGTH_LONG).show();
+           }
+             else
+              { Toast.makeText(getApplicationContext(),"Error",Toast.LENGTH_LONG).show();
+           }
+    }
 }

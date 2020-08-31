@@ -40,12 +40,133 @@ public class singleDatabase extends SQLiteOpenHelper {
     public static final String col_6B = "IMAGE";
 
 
+//Company info:
+    public static final String tableNameCom = "companyInfo";
+    public static final String col_1Com = "ID";
+    public static final String col_2Com = " NAME";
+    public static final String col_3Com = "CEO";
+    public static final String col_4Com = "ADDRESS";
+    public static final String col_5Com = " COUNTRY";
+    public static final String col_6Com = "STATE";
+    public static final String col_7Com = "DISTRICT";
+    public static final String col_8Com = " CITY";
+    public static final String col_9Com = "PINCODE";
+    public static final String col_10Com = "EMAIL1";
+    public static final String col_11Com = " EMAIL2";
+    public static final String col_12Com = "MOBILE";
+    public static final String col_13Com = " TEL";
+    public static final String col_14Com = "FAX";
+    public static final String col_15Com = "WEB";
+    public static final String col_16Com = " GMAP";
+    public static final String col_17Com = "KEYW";
+
+    //Company info1:
+    public static final String tableNameCom1 = "companyInfo";
+    public static final String col_1Com1 = "ID";
+    public static final String col_2Com1 = " NAME";
+    public static final String col_3Com1 = "CEO";
+    public static final String col_4Com1 = "ADDRESS";
+    public static final String col_5Com1 = " COUNTRY";
+    public static final String col_6Com1 = "STATE";
+    public static final String col_7Com1 = "DISTRICT";
+    public static final String col_8Com1 = " CITY";
+    public static final String col_9Com1 = "PINCODE";
+    public static final String col_10Com1 = "EMAIL1";
+    public static final String col_11Com1 = " EMAIL2";
+    public static final String col_12Com1 = "MOBILE";
+    public static final String col_13Com1 = " TEL";
+    public static final String col_14Com1 = "FAX";
+    public static final String col_15Com1 = "WEB";
+    public static final String col_16Com1 = " GMAP";
+    public static final String col_17Com1 = "KEYW";
 
 
-    public singleDatabase( Context context) {
+    public static final String tableNameCom2 = "companyInfo2";
+    public static final String col_1Com2 = "ID";
+    public static final String col_2Com2 = " NAME";
+    public static final String col_3Com2 = "CEO";
+    public static final String col_4Com2 = "ADDRESS";
+    public static final String col_5Com2 = " COUNTRY";
+    public static final String col_6Com2 = "STATE";
+    public static final String col_7Com2 = "DISTRICT";
+    public static final String col_8Com2 = " CITY";
+    public static final String col_9Com2 = "PINCODE";
+    public static final String col_10Com2 = "EMAIL1";
+    public static final String col_11Com2 = " EMAIL2";
+    public static final String col_12Com2 = "MOBILE";
+    public static final String col_13Com2 = " TEL";
+    public static final String col_14Com2 = "FAX";
+    public static final String col_15Com2 = "WEB";
+    public static final String col_16Com2 = " GMAP";
+    public static final String col_17Com2= "KEYW";
 
-        super(context, databaseName1, null, 3);
+
+    //Company Social Info:
+    public static final String tableNameComS = "companyInfoS";
+    public static final String col_1ComS = "ID";
+    public static final String col_2ComS = " NAME";
+    public static final String col_3ComS = "TEL";
+    public static final String col_4ComS = "EMAIL";
+    public static final String col_5ComS = " FACEBOOK";
+    public static final String col_6ComS = "TWITTER";
+    public static final String col_7ComS = "LINKEDIN";
+
+//Product and Services:
+    public static final String tableNameProduct = "Product";
+    public static final String col_1Pr = "ID";
+    public static final String col_2Pr = "NAME";
+    public static final String col_3Pr = " CAT";
+    public static final String col_4Pr = "SUBCAT";
+    public static final String col_5Pr = "CURRENCY";
+    public static final String col_6Pr = " PRIZE";
+    public static final String col_7Pr = "DISPRIZ";
+    public static final String col_8Pr = "IMAGE";
+    public static final String col_9Pr = " DISCP";
+    public static final String col_10Pr = "KEYW";
+
+//CAREER INFO:
+    public static final String tableNameCareer = "Career";
+    public static final String col_1Cr = "ID";
+    public static final String col_2Cr = "NAME";
+    public static final String col_3Cr = " LOCATION";
+    public static final String col_4Cr = "PACK";
+    public static final String col_5Cr = "POSITION";
+    public static final String col_6Cr = " COMP";
+    public static final String col_7Cr = "WORKEXP";
+    public static final String col_8Cr = "EDUCATION";
+    public static final String col_9Cr = " JOBCATEGORY";
+    public static final String col_10Cr = "DESCRIPTION";
+
+//Enquiry:
+    public static final String tableNameEn = "Enquiry";
+    public static final String col_1En = "ID";
+    public static final String col_2En = "ENQUIRY";
+    public static final String col_3En = " NAME";
+    public static final String col_4En = "MOBILE";
+    public static final String col_5En = "EMAIL";
+
+//General Enquity:
+    public static final String tableNameGn = "GeneralEn";
+    public static final String col_1Gn = "ID";
+    public static final String col_2Gn = "ENQUIRY";
+    public static final String col_3Gn = " NAME";
+    public static final String col_4Gn = "MOBILE";
+    public static final String col_5Gn = "EMAIL";
+
+//Referal
+    public static final String tableNameR = "Referal";
+    public static final String col_1Rr = "ID";
+    public static final String col_2Rr = "NAME";
+    public static final String col_3Rr = " PHONE";
+    public static final String col_4Rr = "EMAIL";
+    public static final String col_5Rr = "ADDRESS";
+    public static final String col_6Rr = " COMENT";
+
+    public singleDatabase(Context context) {
+
+        super(context, databaseName1, null, 5);
     }
+
 
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -54,6 +175,15 @@ public class singleDatabase extends SQLiteOpenHelper {
         db.execSQL("create table " + tableNameS + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,NUMB INTEGER)");
         db.execSQL("create table " + tableNameA + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,NUMB INTEGER)");
         db.execSQL("create table " + tableNameB + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME1 TEXT,NAME2 TEXT,NAME3 TEXT,NAME4 TEXT,IMAGE INTEGER)");
+        //db.execSQL("create table " + tableNameCom + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,CEO TEXT,ADDRESS TEXT,COUNTRY TEXT,STATE TEXT,DISTRICT TEXT,PINCODE INTEGER,EMAIL1 TEXT,EMAIL2 TEXT,MOBILE INTEGER,TEL INTEGER,FAX TEXT,GMAP TEXT,KEYW TEXT)");
+       // db.execSQL("create table " + tableNameCom1 + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,CEO TEXT,ADDRESS TEXT,COUNTRY TEXT,STATE TEXT,DISTRICT TEXT,PINCODE TEXT,EMAIL1 TEXT,EMAIL2 TEXT,MOBILE TEXT,TEL TEXT,FAX TEXT,GMAP TEXT,KEYW TEXT)");
+        db.execSQL("create table " + tableNameCom2 + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,CEO TEXT,ADDRESS TEXT,COUNTRY TEXT,STATE TEXT,DISTRICT TEXT,CITY TEXT,PINCODE TEXT,EMAIL1 TEXT,EMAIL2 TEXT,MOBILE TEXT,TEL TEXT,FAX TEXT,WEB TEXT,GMAP TEXT,KEYW TEXT)");
+        db.execSQL("create table " + tableNameComS + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,TEL INTEGER,EMAIL TEXT,FACEBOOK TEXT,TWITTER TEXT,LINKEDIN TEXT)");
+        db.execSQL("create table " + tableNameProduct + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,CAT TEXT,SUBCAT TEXT,CURRENCY TEXT,PRIZE TEXT,DISPRIZ TEXT,IMAGE INTEGER,DISCP TEXT,KEYW TEXT)");
+        db.execSQL("create table " + tableNameCareer + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,LOCATION TEXT,PACK TEXT,POSITION TEXT,COMP TEXT,WORKEXP TEXT,EDUCATIN TEXT,JOBCATEGORY TEXT,DISCRIPTION TEXT)");
+        db.execSQL("create table " + tableNameEn + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,ENQUIRY TEXT,NAME TEXT,MOBILE INTEGER,EMAIL TEXT)");
+        db.execSQL("create table " + tableNameGn + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,ENQUIRY TEXT,NAME TEXT,MOBILE INTEGER,EMAIL TEXT)");
+        db.execSQL("create table " + tableNameR + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,PHONE INTEGER,EMAIL TEXT,ADDRESS TEXT,COMENT TEXT)");
 
 
 
@@ -67,6 +197,15 @@ public class singleDatabase extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + tableNameS);
         db.execSQL("DROP TABLE IF EXISTS " +tableNameA);
         db.execSQL("DROP TABLE IF EXISTS " +tableNameB);
+       // db.execSQL("DROP TABLE IF EXISTS " +tableNameCom);
+       // db.execSQL("DROP TABLE IF EXISTS " +tableNameCom1);
+        db.execSQL("DROP TABLE IF EXISTS " +tableNameCom2);
+        db.execSQL("DROP TABLE IF EXISTS " +tableNameComS);
+        db.execSQL("DROP TABLE IF EXISTS " +tableNameProduct);
+        db.execSQL("DROP TABLE IF EXISTS " +tableNameCareer);
+        db.execSQL("DROP TABLE IF EXISTS " +tableNameEn);
+        db.execSQL("DROP TABLE IF EXISTS " +tableNameGn);
+        db.execSQL("DROP TABLE IF EXISTS " +tableNameR);
 
 
         onCreate(db);
@@ -226,4 +365,123 @@ public class singleDatabase extends SQLiteOpenHelper {
         SQLiteDatabase db=this.getReadableDatabase();
         db.execSQL("Delete from "+tableNameB+" where NAME1=?",new String[]{NAME});
     }
+
+    public boolean insertDataDialog(String Enquiry, String Name, int Mobile, String email) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col_2En, Enquiry);
+        contentValues.put(col_3En, Name);
+        contentValues.put(col_4En, Mobile);
+        contentValues.put(col_5En, email);
+
+        long result = db.insert(tableNameEn, null, contentValues);
+        if (result == -1)
+            return false;
+        else
+            return true;
+    }
+
+    public Cursor getDataEnquiry()
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("select * from "+tableNameS,null);
+        return res;
+    }
+
+    public boolean insertDataCompany(String name1, String name2, String address, String country, String state,String dist,String city, int pincode,String email,String emailr,int mobile,int tel,String fax, String web, String gmap, String k) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col_2Com, name1);
+        contentValues.put(col_3Com, name2);
+        contentValues.put(col_4Com, address);
+        contentValues.put(col_5Com, country);
+        contentValues.put(col_6Com,state);
+        contentValues.put(col_7Com,dist);
+        contentValues.put(col_8Com,city);
+        contentValues.put(col_9Com,pincode);
+        contentValues.put(col_10Com,email);
+        contentValues.put(col_11Com,emailr);
+        contentValues.put(col_12Com,mobile);
+        contentValues.put(col_13Com,tel);
+        contentValues.put(col_14Com,fax);
+        contentValues.put(col_15Com,web);
+        contentValues.put(col_16Com,gmap);
+        contentValues.put(col_17Com,k);
+
+
+
+        long result = db.insert(tableNameCom, null, contentValues);
+        if (result == -1)
+            return false;
+        else
+            return true;
+    }
+
+    public boolean insertDataCompany2(String name1, String name2, String address, String country, String state,String dist,String city, String pincode,String email,String emailr,String mobile,String tel,String fax, String web, String gmap, String k) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col_2Com1, name1);
+        contentValues.put(col_3Com1, name2);
+        contentValues.put(col_4Com1, address);
+        contentValues.put(col_5Com1, country);
+        contentValues.put(col_6Com1,state);
+        contentValues.put(col_7Com1,dist);
+        contentValues.put(col_8Com1,city);
+        contentValues.put(col_9Com1,pincode);
+        contentValues.put(col_10Com1,email);
+        contentValues.put(col_11Com1,emailr);
+        contentValues.put(col_12Com1,mobile);
+        contentValues.put(col_13Com1,tel);
+        contentValues.put(col_14Com1,fax);
+        contentValues.put(col_15Com1,web);
+        contentValues.put(col_16Com1,gmap);
+        contentValues.put(col_17Com1,k);
+
+
+
+        long result = db.insert(tableNameCom2, null, contentValues);
+        if (result == -1)
+            return false;
+        else
+            return true;
+    }
+
+    public Cursor getDataCompany()
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("select * from "+tableNameCom2,null);
+        return res;
+    }
+
+    public void removeCompanyData(String NAME)
+    {
+        SQLiteDatabase db=this.getReadableDatabase();
+        db.execSQL("Delete from "+tableNameCom2+" where COUNTRY=?",new String[]{NAME});
+    }
+
+    public boolean updateCompanyData(String name1, String name2, String address, String country, String state,String dist,String city, String pincode,String email,String emailr,String mobile,String tel,String fax, String web, String gmap, String k) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col_2Com1, name1);
+        contentValues.put(col_3Com1, name2);
+        contentValues.put(col_4Com1, address);
+        contentValues.put(col_5Com1, country);
+        contentValues.put(col_6Com1, state);
+        contentValues.put(col_7Com1, dist);
+        contentValues.put(col_8Com1, city);
+        contentValues.put(col_9Com1, pincode);
+        contentValues.put(col_10Com1, email);
+        contentValues.put(col_11Com1, emailr);
+        contentValues.put(col_12Com1, mobile);
+        contentValues.put(col_13Com1, tel);
+        contentValues.put(col_14Com1, fax);
+        contentValues.put(col_15Com1, web);
+        contentValues.put(col_16Com1, gmap);
+        contentValues.put(col_17Com1, k);
+
+        db.update(tableNameCom2,contentValues,"NAME=?",new String[]{name1});
+
+        return true;
+    }
+
 }

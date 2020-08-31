@@ -1,39 +1,25 @@
 package com.example.nevihationapplication;
 
-import android.content.ComponentName;
 import android.content.Intent;
-import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.support.annotation.NonNull;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.CardView;
-import android.support.design.widget.NavigationView;
-import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.SubMenu;
 import android.view.View;
-import android.widget.GridView;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.io.ByteArrayOutputStream;
-import java.io.FileInputStream;
-import java.util.jar.Attributes;
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
+import androidx.drawerlayout.widget.DrawerLayout;
 
-import static java.util.jar.Attributes.*;
+import com.google.android.material.navigation.NavigationView;
 
 public class NevigationDraw extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     private DrawerLayout draw;
     private ActionBarDrawerToggle act;
     CardView card;
+    CardView cardCom;
 
     TextView f;
     TextView l;
@@ -52,6 +38,7 @@ public class NevigationDraw extends AppCompatActivity implements NavigationView.
 
 
         card=findViewById(R.id.cardV);
+        cardCom=findViewById(R.id.cardCompany);
 
 
 
@@ -75,6 +62,14 @@ public class NevigationDraw extends AppCompatActivity implements NavigationView.
 
                 Intent in=new Intent(NevigationDraw.this, searchbox.class);
                 startActivity(in);
+            }
+        });
+
+        cardCom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent inCom=new Intent(NevigationDraw.this, company.class);
+                startActivity(inCom);
             }
         });
 
