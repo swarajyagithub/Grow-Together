@@ -129,6 +129,7 @@
             <ImageView
                 android:layout_width="45dp"
                 android:layout_height="45dp"
+                android:id="@+id/ref111"
                 android:layout_gravity="center"
                 app:srcCompat="@drawable/r"
                 />
@@ -244,8 +245,10 @@
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
+
             android:layout_width="190dp"
             android:layout_height="125dp"
+            android:id="@+id/cardCRE"
             android:layout_marginTop="544dp"
             android:layout_marginLeft="200dp">
 
@@ -267,15 +270,7 @@
         </androidx.cardview.widget.CardView>
 
 
-
-
-
-
-
-
     </RelativeLayout>
-
-
 
 
     <com.google.android.material.navigation.NavigationView

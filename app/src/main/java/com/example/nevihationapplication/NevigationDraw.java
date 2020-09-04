@@ -20,6 +20,9 @@ public class NevigationDraw extends AppCompatActivity implements NavigationView.
     private ActionBarDrawerToggle act;
     CardView card;
     CardView cardCom;
+    CardView cardcar;
+
+
 
     TextView f;
     TextView l;
@@ -39,8 +42,7 @@ public class NevigationDraw extends AppCompatActivity implements NavigationView.
 
         card=findViewById(R.id.cardV);
         cardCom=findViewById(R.id.cardCompany);
-
-
+        cardcar=findViewById(R.id.cardCRE);
 
 
 
@@ -72,6 +74,15 @@ public class NevigationDraw extends AppCompatActivity implements NavigationView.
                 startActivity(inCom);
             }
         });
+
+        cardcar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent incar=new Intent(NevigationDraw.this,career.class);
+                startActivity(incar);
+            }
+        });
+
 
 
 

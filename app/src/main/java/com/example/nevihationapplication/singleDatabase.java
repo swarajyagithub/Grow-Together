@@ -137,6 +137,18 @@ public class singleDatabase extends SQLiteOpenHelper {
     public static final String col_9Cr = " JOBCATEGORY";
     public static final String col_10Cr = "DESCRIPTION";
 
+    public static final String tableNameCareer12 = "Career12";
+    public static final String col_1Cr1 = "ID";
+    public static final String col_2Cr1 = "NAME";
+    public static final String col_3Cr1 = " LOCATION";
+    public static final String col_4Cr1 = "PACK";
+    public static final String col_5Cr1 = "POSITION";
+    public static final String col_6Cr1 = " COMP";
+    public static final String col_7Cr1 = "WORKEXP";
+    public static final String col_8Cr1 = "EDUCATIN";
+    public static final String col_9Cr1 = " JOBCATEGORY";
+    public static final String col_10Cr1 = "DESCRIPTION";
+
 //Enquiry:
     public static final String tableNameEn = "Enquiry";
     public static final String col_1En = "ID";
@@ -164,7 +176,7 @@ public class singleDatabase extends SQLiteOpenHelper {
 
     public singleDatabase(Context context) {
 
-        super(context, databaseName1, null, 5);
+        super(context, databaseName1, null, 7);
     }
 
 
@@ -180,7 +192,8 @@ public class singleDatabase extends SQLiteOpenHelper {
         db.execSQL("create table " + tableNameCom2 + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,CEO TEXT,ADDRESS TEXT,COUNTRY TEXT,STATE TEXT,DISTRICT TEXT,CITY TEXT,PINCODE TEXT,EMAIL1 TEXT,EMAIL2 TEXT,MOBILE TEXT,TEL TEXT,FAX TEXT,WEB TEXT,GMAP TEXT,KEYW TEXT)");
         db.execSQL("create table " + tableNameComS + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,TEL INTEGER,EMAIL TEXT,FACEBOOK TEXT,TWITTER TEXT,LINKEDIN TEXT)");
         db.execSQL("create table " + tableNameProduct + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,CAT TEXT,SUBCAT TEXT,CURRENCY TEXT,PRIZE TEXT,DISPRIZ TEXT,IMAGE INTEGER,DISCP TEXT,KEYW TEXT)");
-        db.execSQL("create table " + tableNameCareer + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,LOCATION TEXT,PACK TEXT,POSITION TEXT,COMP TEXT,WORKEXP TEXT,EDUCATIN TEXT,JOBCATEGORY TEXT,DISCRIPTION TEXT)");
+        //db.execSQL("create table " + tableNameCareer + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,LOCATION TEXT,PACK TEXT,POSITION TEXT,COMP TEXT,WORKEXP TEXT,EDUCATIN TEXT,JOBCATEGORY TEXT,DESCRIPTION TEXT)");
+        db.execSQL("create table " + tableNameCareer12 + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,LOCATION TEXT,PACK TEXT,POSITION TEXT,COMP TEXT,WORKEXP TEXT,EDUCATIN TEXT,JOBCATEGORY TEXT,DESCRIPTION TEXT)");
         db.execSQL("create table " + tableNameEn + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,ENQUIRY TEXT,NAME TEXT,MOBILE INTEGER,EMAIL TEXT)");
         db.execSQL("create table " + tableNameGn + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,ENQUIRY TEXT,NAME TEXT,MOBILE INTEGER,EMAIL TEXT)");
         db.execSQL("create table " + tableNameR + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,PHONE INTEGER,EMAIL TEXT,ADDRESS TEXT,COMENT TEXT)");
@@ -202,7 +215,8 @@ public class singleDatabase extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " +tableNameCom2);
         db.execSQL("DROP TABLE IF EXISTS " +tableNameComS);
         db.execSQL("DROP TABLE IF EXISTS " +tableNameProduct);
-        db.execSQL("DROP TABLE IF EXISTS " +tableNameCareer);
+        //db.execSQL("DROP TABLE IF EXISTS " +tableNameCareer);
+        db.execSQL("DROP TABLE IF EXISTS " +tableNameCareer12);
         db.execSQL("DROP TABLE IF EXISTS " +tableNameEn);
         db.execSQL("DROP TABLE IF EXISTS " +tableNameGn);
         db.execSQL("DROP TABLE IF EXISTS " +tableNameR);
@@ -482,6 +496,38 @@ public class singleDatabase extends SQLiteOpenHelper {
         db.update(tableNameCom2,contentValues,"NAME=?",new String[]{name1});
 
         return true;
+    }
+
+    public boolean insertDataCareer12(String name1, String location, String pack, String pos, String cmpn,String work,String education, String job,String dis) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col_2Cr1, name1);
+        contentValues.put(col_3Cr1, location);
+        contentValues.put(col_4Cr1, pack);
+        contentValues.put(col_5Cr1, pos);
+        contentValues.put(col_6Cr1, cmpn);
+        contentValues.put(col_7Cr1, work);
+        contentValues.put(col_8Cr1, education);
+        contentValues.put(col_9Cr1, job);
+        contentValues.put(col_10Cr1,dis);
+
+
+        long result = db.insert(tableNameCareer12, null, contentValues);
+        if (result == -1)
+            return false;
+        else
+            return true;
+    }
+    public Cursor getDataCareer()
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("select * from "+tableNameCareer12,null);
+        return res;
+    }
+    public void removeCareerData(String location)
+    {
+        SQLiteDatabase db=this.getReadableDatabase();
+        db.execSQL("Delete from "+tableNameCareer12+" where LOCATION=?",new String[]{location});
     }
 
 }

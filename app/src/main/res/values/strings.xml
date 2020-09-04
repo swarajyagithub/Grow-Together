@@ -56,12 +56,65 @@
     </string-array>
 
     <string-array name="District_Names">
-        <item>Stara</item>
+        <item>Satara</item>
         <item>Kolhapur</item>
         <item>Pune</item>
         <item>Mumbai</item>
         <item>Nashik</item>
         <item>Solapur</item>
+    </string-array>
+    <string-array name="Company_Names">
+        <item>Select Company</item>
+        <item>Infosys Private Ltd.</item>
+        <item>Wipro Limited</item>
+        <item>Tata Consultancy Services</item>
+        <item>Tech Mahindra</item>
+        <item>Cognizant</item>
+        <item>Amdocs</item>
+        <item>Atos Syntel</item>
+        <item>Capgemini</item>
+        <item>iNautixx/BNY Mellon</item>
+        <item>IBM</item>
+        <item>Accenture</item>
+    </string-array>
+    <string-array name="Work_Experience">
+        <item>Select Work Experience</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Higher_Education">
+        <item>Select Higher Education</item>
+        <item>M.E.</item>
+        <item>B.E.</item>
+        <item>Diploma in Engineering</item>
+        <item>B.Tech</item>
+        <item>M.C.A.</item>
+        <item>B.C.A.</item>
+        <item>M.B.A.</item>
+        <item>B.Sc.</item>
+        <item>M.Sc.</item>
+        <item>B.Com</item>
+    </string-array>
+    <string-array name="Job_Category">
+        <item>Select Job Category</item>
+        <item>Support Specialist</item>
+        <item>Computer Programmer</item>
+        <item>Quality Assurance Tester</item>
+        <item>Web Developer</item>
+        <item>It technician</item>
+        <item>Systems Analyst</item>
+        <item>Network Engineer</item>
+        <item>User Experience Designer</item>
+        <item>Database Administrator</item>
     </string-array>
 
     <!-- TODO: Remove or change this placeholder text -->
