@@ -21,6 +21,8 @@ public class NevigationDraw extends AppCompatActivity implements NavigationView.
     CardView card;
     CardView cardCom;
     CardView cardcar;
+    CardView carEnq;
+    CardView carGEnq;
 
 
 
@@ -43,6 +45,8 @@ public class NevigationDraw extends AppCompatActivity implements NavigationView.
         card=findViewById(R.id.cardV);
         cardCom=findViewById(R.id.cardCompany);
         cardcar=findViewById(R.id.cardCRE);
+        carEnq=findViewById(R.id.enq);
+        carGEnq=findViewById(R.id.genq);
 
 
 
@@ -80,6 +84,20 @@ public class NevigationDraw extends AppCompatActivity implements NavigationView.
             public void onClick(View v) {
                 Intent incar=new Intent(NevigationDraw.this,career.class);
                 startActivity(incar);
+            }
+        });
+        carEnq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent incarE=new Intent(NevigationDraw.this,enquiryfragment.class);
+                startActivity(incarE);
+            }
+        });
+        carGEnq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent incargE=new Intent(NevigationDraw.this,enquiryfragment.class);
+                startActivity(incargE);
             }
         });
 

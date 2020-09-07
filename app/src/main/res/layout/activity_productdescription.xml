@@ -11,7 +11,7 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="280dp"
-        android:src="@drawable/wirebundle"/>
+        app:srcCompat="@drawable/wirebundle"/>
 
     <RelativeLayout
         android:layout_width="match_parent"
