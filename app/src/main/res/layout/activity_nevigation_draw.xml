@@ -122,7 +122,7 @@
             android:layout_width="190dp"
             android:layout_height="125dp"
 
-
+           android:id="@+id/cardRef"
             android:layout_marginTop="276dp"
             android:layout_marginLeft="5dp">
 

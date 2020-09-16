@@ -166,7 +166,7 @@ public class singleDatabase extends SQLiteOpenHelper {
     public static final String col_5Gn = "EMAIL";
 
 //Referal
-    public static final String tableNameR = "Referal";
+    public static final String tableNameRF = "ReferalF";
     public static final String col_1Rr = "ID";
     public static final String col_2Rr = "NAME";
     public static final String col_3Rr = " PHONE";
@@ -176,7 +176,7 @@ public class singleDatabase extends SQLiteOpenHelper {
 
     public singleDatabase(Context context) {
 
-        super(context, databaseName1, null, 7);
+        super(context, databaseName1, null, 8);
     }
 
 
@@ -196,7 +196,8 @@ public class singleDatabase extends SQLiteOpenHelper {
         db.execSQL("create table " + tableNameCareer12 + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,LOCATION TEXT,PACK TEXT,POSITION TEXT,COMP TEXT,WORKEXP TEXT,EDUCATIN TEXT,JOBCATEGORY TEXT,DESCRIPTION TEXT)");
         db.execSQL("create table " + tableNameEn + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,ENQUIRY TEXT,NAME TEXT,MOBILE INTEGER,EMAIL TEXT)");
         db.execSQL("create table " + tableNameGn + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,ENQUIRY TEXT,NAME TEXT,MOBILE INTEGER,EMAIL TEXT)");
-        db.execSQL("create table " + tableNameR + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,PHONE INTEGER,EMAIL TEXT,ADDRESS TEXT,COMENT TEXT)");
+      //  db.execSQL("create table " + tableNameR + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,PHONE INTEGER,EMAIL TEXT,ADDRESS TEXT,COMENT TEXT)");
+        db.execSQL("create table " + tableNameRF + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,PHONE TEXT,EMAIL TEXT,ADDRESS TEXT,COMENT TEXT)");
 
 
 
@@ -219,7 +220,8 @@ public class singleDatabase extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " +tableNameCareer12);
         db.execSQL("DROP TABLE IF EXISTS " +tableNameEn);
         db.execSQL("DROP TABLE IF EXISTS " +tableNameGn);
-        db.execSQL("DROP TABLE IF EXISTS " +tableNameR);
+        //db.execSQL("DROP TABLE IF EXISTS " +tableNameR);
+        db.execSQL("DROP TABLE IF EXISTS " +tableNameRF);
 
 
         onCreate(db);
@@ -398,7 +400,7 @@ public class singleDatabase extends SQLiteOpenHelper {
     public Cursor getDataEnquiry()
     {
         SQLiteDatabase db = this.getReadableDatabase();
-        Cursor res = db.rawQuery("select * from "+tableNameS,null);
+        Cursor res = db.rawQuery("select * from "+tableNameEn,null);
         return res;
     }
 
@@ -528,6 +530,33 @@ public class singleDatabase extends SQLiteOpenHelper {
     {
         SQLiteDatabase db=this.getReadableDatabase();
         db.execSQL("Delete from "+tableNameCareer12+" where LOCATION=?",new String[]{location});
+    }
+    public boolean insertDataReferral(String name, String phone, String email, String address, String coment) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col_2Rr, name);
+        contentValues.put(col_3Rr, phone);
+        contentValues.put(col_4Rr, email);
+        contentValues.put(col_5Rr, address);
+        contentValues.put(col_6Rr, coment);
+
+
+        long result = db.insert(tableNameRF, null, contentValues);
+        if (result == -1)
+            return false;
+        else
+            return true;
+    }
+    public Cursor getDataReferral()
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("select * from "+tableNameRF,null);
+        return res;
+    }
+    public void removeReferralData()
+    {
+        SQLiteDatabase db=this.getReadableDatabase();
+        db.execSQL("Delete from "+tableNameRF);
     }
 
 }
