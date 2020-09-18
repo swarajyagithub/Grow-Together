@@ -174,9 +174,31 @@ public class singleDatabase extends SQLiteOpenHelper {
     public static final String col_5Rr = "ADDRESS";
     public static final String col_6Rr = " COMENT";
 
+    //ImageProduct:
+    public static final String tableNameIP = "ImageP";
+    public static final String col_1I = "ID";
+    public static final String col_2I = "NAME";
+    public static final String col_3I = " IMAGE";
+
+    //Service Table:
+    public static final String tableNameSP = "ProductS";
+    public static final String col_1SP = "ID";
+    public static final String col_2SP = "NAME";
+    public static final String col_3SP = " PNAME";
+    public static final String col_4SP = "CAT";
+    public static final String col_5SP = "SUBCAT";
+    public static final String col_6SP = " CUR";
+    public static final String col_7SP = "PRIZE";
+    public static final String col_8SP = "DIP";
+    public static final String col_9SP = " IMAGE";
+    public static final String col_10SP = "DIS";
+    public static final String col_11SP = "KW";
+
+
+
     public singleDatabase(Context context) {
 
-        super(context, databaseName1, null, 8);
+        super(context, databaseName1, null, 10);
     }
 
 
@@ -198,6 +220,8 @@ public class singleDatabase extends SQLiteOpenHelper {
         db.execSQL("create table " + tableNameGn + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,ENQUIRY TEXT,NAME TEXT,MOBILE INTEGER,EMAIL TEXT)");
       //  db.execSQL("create table " + tableNameR + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,PHONE INTEGER,EMAIL TEXT,ADDRESS TEXT,COMENT TEXT)");
         db.execSQL("create table " + tableNameRF + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,PHONE TEXT,EMAIL TEXT,ADDRESS TEXT,COMENT TEXT)");
+        db.execSQL("create table " + tableNameIP + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,IMAGE TEXT)");
+        db.execSQL("create table " + tableNameSP+ " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,PNAME TEXT,CAT TEXT,SUBCAT TEXT,CUR TEXT,PRIZE TEXT,DIP TEXT,IMAGE TEXT,DIS TEXT,KW TEXT)");
 
 
 
@@ -222,6 +246,9 @@ public class singleDatabase extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " +tableNameGn);
         //db.execSQL("DROP TABLE IF EXISTS " +tableNameR);
         db.execSQL("DROP TABLE IF EXISTS " +tableNameRF);
+        db.execSQL("DROP TABLE IF EXISTS " +tableNameIP);
+        db.execSQL("DROP TABLE IF EXISTS " +tableNameSP);
+
 
 
         onCreate(db);
@@ -557,6 +584,89 @@ public class singleDatabase extends SQLiteOpenHelper {
     {
         SQLiteDatabase db=this.getReadableDatabase();
         db.execSQL("Delete from "+tableNameRF);
+    }
+    public boolean insertDataService(String name1, String cat, String subct, String currency, String pri,String dispr,int img, String disc,String k) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col_2Pr, name1);
+        contentValues.put(col_3Pr, cat);
+        contentValues.put(col_4Pr, subct);
+        contentValues.put(col_5Pr, currency);
+        contentValues.put(col_6Pr, pri);
+        contentValues.put(col_7Pr, dispr);
+        contentValues.put(col_8Pr, img);
+        contentValues.put(col_9Pr, disc);
+        contentValues.put(col_10Pr,k);
+
+
+        long result = db.insert(tableNameProduct, null, contentValues);
+        if (result == -1)
+            return false;
+        else
+            return true;
+    }
+
+    public Cursor getImageP(String ni)
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("select * from "+tableNameC+" where NAME=?",new String[]{ni});
+        return res;
+    }
+
+    public boolean insertIPData(String name, String img) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col_2I, name);
+        contentValues.put(col_3I, img);
+
+        long result = db.insert(tableNameIP, null, contentValues);
+        if (result == -1)
+            return false;
+        else
+            return true;
+    }
+    public Cursor getIPData()
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("select * from "+tableNameIP,null);
+        return res;
+    }
+    public boolean insertSData(String name1, String pn, String c, String sc, String curr,String pi,String dpi, String img,String dis,String k) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col_2SP, name1);
+        contentValues.put(col_3SP, pn);
+        contentValues.put(col_4SP, c);
+        contentValues.put(col_5SP, sc);
+        contentValues.put(col_6SP, curr);
+        contentValues.put(col_7SP, pi);
+        contentValues.put(col_8SP, dpi);
+        contentValues.put(col_9SP, img);
+        contentValues.put(col_10SP,dis);
+        contentValues.put(col_11SP,k);
+
+
+        long result = db.insert(tableNameSP, null, contentValues);
+        if (result == -1)
+            return false;
+        else
+            return true;
+    }
+    public Cursor getSData()
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("select * from "+tableNameSP,null);
+        return res;
+    }
+    public void removeS1Data()
+    {
+        SQLiteDatabase db=this.getReadableDatabase();
+        db.execSQL("Delete from "+tableNameSP);
+    }
+    public void removeS2Data()
+    {
+        SQLiteDatabase db=this.getReadableDatabase();
+        db.execSQL("Delete from "+tableNameIP);
     }
 
 }
