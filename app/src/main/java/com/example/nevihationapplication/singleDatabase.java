@@ -526,6 +526,12 @@ public class singleDatabase extends SQLiteOpenHelper {
 
         return true;
     }
+    public Cursor edit(String comN)
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("select * from "+tableNameCom2+" where NAME=?",new String[]{comN});
+        return res;
+    }
 
     public boolean insertDataCareer12(String name1, String location, String pack, String pos, String cmpn,String work,String education, String job,String dis) {
         SQLiteDatabase db = this.getWritableDatabase();

@@ -1,6 +1,6 @@
 package com.example.nevihationapplication;
 
-import android.app.Activity;
+import androidx.appcompat.app.AppCompatActivity;
 
-public class nevigationDrawer extends Activity {
+public class nevigationDrawer extends AppCompatActivity {
 }

@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -38,6 +39,8 @@ public class company extends AppCompatActivity {
     ArrayList<String> companyCity=new ArrayList<String>();
     ArrayList<String> companyMobile=new ArrayList<String>();
 
+    private static FragmentManager fragmentManager;
+
 
 
     @Override
@@ -52,6 +55,8 @@ public class company extends AppCompatActivity {
         gridViewCom=findViewById(id.gridCompany);
 
         final Button bt1=findViewById(R.id.addData);
+
+        fragmentManager = getSupportFragmentManager();
 
 
 
@@ -135,7 +140,7 @@ public class company extends AppCompatActivity {
         }
 
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(final int position, View convertView, ViewGroup parent) {
             View view = getLayoutInflater().inflate(layout.companyedit_item, null);
             TextView textView1 = view.findViewById(id.cName);
             TextView textView2 = view.findViewById(id.cCOE);
@@ -153,6 +158,12 @@ public class company extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     Intent in = new Intent(company.this, saveCompany.class);
+                  //  companyedit1 agrumentF=new companyedit1();
+                //    Bundle data=new Bundle();
+                 //   data.putString("N",itemCMFilter.get(position).getComName());
+               //    agrumentF.setArguments(data);
+                  // fragmentManager.beginTransaction().replace(R.id.fra,agrumentF).commit();
+                //    getSupportFragmentManager().beginTransaction().replace(R.id.f,agrumentF).commit();
                     startActivity(in);
 
 

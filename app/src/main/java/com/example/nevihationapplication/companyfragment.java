@@ -102,7 +102,7 @@ public class companyfragment extends Fragment {
         address=(EditText)view.findViewById(R.id.addressCom);
         city=(EditText)view.findViewById(R.id.cityCom);
         pin=(EditText)view.findViewById(R.id.pinCom);
-        id=(EditText)view.findViewById(R.id.idCom);
+        id=(EditText)view.findViewById(R.id.idC);
         idr=(EditText)view.findViewById(R.id.idrCom);
         mobile=(EditText)view.findViewById(R.id.mobileCom);
         tel=(EditText)view.findViewById(R.id.telCom);
