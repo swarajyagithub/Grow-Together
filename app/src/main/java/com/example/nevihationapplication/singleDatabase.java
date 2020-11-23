@@ -7,6 +7,63 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class singleDatabase extends SQLiteOpenHelper {
+
+    public static final String tableNameNeiVoisins1 = "NeigbhorDataV1";
+    public static final String col_1NB = "ID";
+    public static final String col_2NB = " NAME";
+    public static final String col_3NB = "YOUARE";
+    public static final String col_4NB = "EMAIL";
+    public static final String col_5NB = "MOBILE";
+    public static final String col_6NB="ADDRESS";
+    public static final String col_7NB="PASSWORD";
+    public static final String col_8NB="CONFIRMP";
+    public static final String col_9NB="IMAGE";
+    public static final String col_10NB="DBIRTH";
+    public static final String col_11NB="LAST";
+    public static final String col_12NB="CP";
+    public static final String col_13NB="CITY";
+    public static final String col_14NB="ADDR";
+    public static final String col_15NB="BIOGRAPHY";
+    public static final String col_16NB="PARTICULAR";
+    public static final String col_17NB="PROFE";
+    public static final String col_18NB="PROFESSION";
+
+
+    public static final String tableNamPostRequeteDonneeV= "VoisinDonneePoster";
+    public static final String col_1P = "ID";
+    public static final String col_2P = " EMAIL";
+    public static final String col_3P = "LOCATION";
+    public static final String col_4P = "FORRENT";
+    public static final String col_5P = "DURATION";
+    public static final String col_6P="BUDGET";
+    public static final String col_7P="LOCATION2";
+    public static final String col_8P="QUOTATION";
+    public static final String col_9P="IMAGE";
+    public static final String col_10P="POST";
+    public static final String col_11P="BUDGET2";
+    public static final String col_12P="NAME";
+    public static final String col_13P="DATE";
+    public static final String col_14P="TIME";
+    public static final String col_15P="PINCODE";
+    public static final String col_16P="IMAGEP";
+    public static final String col_17P="POSTMONTH";
+    public static final String col_18P="POSTYEAR";
+    public static final String col_19P="POSTHH";
+    public static final String col_20P="SHOWTIME1";
+    public static final String col_21P="SHOWTIME2";
+
+
+
+    public static final String tableNameNeiPostSentTime = "NeigbhorDataPostTime";
+    public static final String col_1Ti = "ID";
+    public static final String col_2Ti = " EMAIL";
+    public static final String col_3Ti = "LYEAR";
+    public static final String col_4Ti = "LMONTH";
+    public static final String col_5Ti = "LDATE";
+    public static final String col_6Ti="LMINUTES";
+    public static final String col_7Ti="LHOUR";
+
+
     public static final String databaseName1 = "UserInformationDatabase";
     public static final String tableNameU = "UserData";
     public static final String col_1 = "ID";
@@ -180,6 +237,10 @@ public class singleDatabase extends SQLiteOpenHelper {
     public static final String col_2I = "NAME";
     public static final String col_3I = " IMAGE";
 
+    public static final String tableNameexp = "ExampleData";
+    public static final String col_1IE = "ID";
+    public static final String col_2IE = "NAME";
+
     //Service Table:
     public static final String tableNameSP = "ProductS";
     public static final String col_1SP = "ID";
@@ -198,7 +259,7 @@ public class singleDatabase extends SQLiteOpenHelper {
 
     public singleDatabase(Context context) {
 
-        super(context, databaseName1, null, 10);
+        super(context, databaseName1, null, 22);
     }
 
 
@@ -223,6 +284,10 @@ public class singleDatabase extends SQLiteOpenHelper {
         db.execSQL("create table " + tableNameIP + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,IMAGE TEXT)");
         db.execSQL("create table " + tableNameSP+ " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,PNAME TEXT,CAT TEXT,SUBCAT TEXT,CUR TEXT,PRIZE TEXT,DIP TEXT,IMAGE TEXT,DIS TEXT,KW TEXT)");
 
+        db.execSQL("create table " + tableNameNeiVoisins1+ " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,YOUARE TEXT,EMAIL TEXT,MOBILE TEXT,ADDRESS TEXT,PASSWORD TEXT,CONFIRMP TEXT,IMAGE TEXT,DBIRTH TEXT,LAST TEXT,CP TEXT,CITY TEXT, ADDR TEXT,BIOGRAPHY TEXT,PARTICULAR TEXT,PROFE TEXT,PROFESSION TEXT)");
+        db.execSQL("create table " + tableNamPostRequeteDonneeV + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, EMAIL TEXT,LOCATION TEXT,FORRENT TEXT,DURATION TEXT,BUDGET TEXT,LOCATION2 TEXT,QUOTATION TEXT,IMAGE TEXT,POST TEXT,BUDGET2 TEXT,NAME TEXT,DATE TEXT,TIME TEXT,PINCODE TEXT,IMAGEP TEXT,POSTMONTH TEXT, POSTYEAR TEXT, POSTHH TEXT,SHOWTIME1 TEXT,SHOWTIME2 TEXT)");
+        db.execSQL("create table " + tableNameNeiPostSentTime + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,EMAIL TEXT,LYEAR TEXT,LMONTH TEXT,LDATE TEXT,LMINUTES TEXT, LHOUR TEXT)");
+        db.execSQL("create table " + tableNameexp + " (ID INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT)");
 
 
 
@@ -248,6 +313,12 @@ public class singleDatabase extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " +tableNameRF);
         db.execSQL("DROP TABLE IF EXISTS " +tableNameIP);
         db.execSQL("DROP TABLE IF EXISTS " +tableNameSP);
+        db.execSQL("DROP TABLE IF EXISTS " +tableNameNeiVoisins1);
+        db.execSQL("DROP TABLE IF EXISTS " +tableNameexp);
+        db.execSQL("DROP TABLE IF EXISTS " +tableNamPostRequeteDonneeV);
+        db.execSQL("DROP TABLE IF EXISTS " +tableNameNeiPostSentTime);
+
+
 
 
 
@@ -265,6 +336,18 @@ public class singleDatabase extends SQLiteOpenHelper {
         contentValues.put(cal_4, email);
         contentValues.put(cal_5, password);
         long result = db.insert(tableNameU, null, contentValues);
+        if (result == -1)
+            return false;
+        else
+            return true;
+    }
+
+    public boolean insertUserExData(String name) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col_2IE, name);
+
+        long result = db.insert(tableNameexp, null, contentValues);
         if (result == -1)
             return false;
         else
@@ -673,6 +756,231 @@ public class singleDatabase extends SQLiteOpenHelper {
     {
         SQLiteDatabase db=this.getReadableDatabase();
         db.execSQL("Delete from "+tableNameIP);
+    }
+
+
+    //NextdoortoAndroidApplication:
+
+    public boolean checkMailNei(String EMAIL) {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("Select * from "+tableNameNeiVoisins1+" where EMAIL=?", new String[]{EMAIL});
+        if (cursor.getCount() > 0)
+            return false;
+        else
+            return true;
+
+    }
+
+    public boolean insertNeiData(String NAME, String YOUARE, String EMAIL, String MOBILE, String ADDRESS,String PASSWORD,String CONFIRMP, String IMAGE,String DBIRTH,String LAST,String CP, String CITY,String ADDR,String BIOGRAPHY, String PARTICULAR,String PROFE, String PROFESSION) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col_2NB, NAME);
+        contentValues.put(col_3NB, YOUARE);
+        contentValues.put(col_4NB, EMAIL);
+        contentValues.put(col_5NB, MOBILE);
+        contentValues.put(col_6NB, ADDRESS);
+        contentValues.put(col_7NB, PASSWORD);
+        contentValues.put(col_8NB,CONFIRMP);
+        contentValues.put(col_9NB, IMAGE);
+        contentValues.put(col_10NB,DBIRTH);
+        contentValues.put(col_11NB,LAST);
+        contentValues.put(col_12NB,CP);
+        contentValues.put(col_13NB, CITY);
+        contentValues.put(col_14NB,ADDR);
+        contentValues.put(col_15NB,BIOGRAPHY);
+        contentValues.put(col_16NB,PARTICULAR);
+        contentValues.put(col_17NB, PROFE );
+        contentValues.put(col_18NB, PROFESSION);
+
+
+
+
+
+        long result = db.insert(tableNameNeiVoisins1, null, contentValues);
+        if (result == -1)
+            return false;
+        else
+            return true;
+    }
+
+    public  boolean checkLogin(String mail,String pass)
+    {
+        SQLiteDatabase db=this.getReadableDatabase();
+        String sql=  "Select * from'"+tableNameNeiVoisins1+"'where EMAIL='"+mail+"'and PASSWORD='"+pass+"'";
+        Cursor c=db.rawQuery(sql,null) ;
+        if(c.getCount()>0)
+
+            return false;
+        else
+            return true;
+    }
+    public Cursor getNeiData()
+    {
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("select * from "+tableNameNeiVoisins1,null);
+        return res;
+    }
+    public Cursor getFirstNameNei(String EMAIL)
+    {
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursorF=db.rawQuery("Select * from "+tableNameNeiVoisins1+" where EMAIL=?",new String[]{EMAIL});
+        return cursorF;
+    }
+    public boolean updateNeibrData(String NAME, String YOUARE, String EMAIL, String MOBILE, String ADDRESS,String PASSWORD,String CONFIRMP, String IMAGE,String DBIRTH,String LAST,String CP, String CITY,String ADDR,String BIOGRAPHY, String PARTICULAR,String PROFE, String PROFESSION) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col_2NB, NAME);
+        contentValues.put(col_3NB, YOUARE);
+        contentValues.put(col_4NB, EMAIL);
+        contentValues.put(col_5NB, MOBILE);
+        contentValues.put(col_6NB, ADDRESS);
+        contentValues.put(col_7NB, PASSWORD);
+        contentValues.put(col_8NB,CONFIRMP);
+        contentValues.put(col_9NB, IMAGE);
+        contentValues.put(col_10NB,DBIRTH);
+        contentValues.put(col_11NB,LAST);
+        contentValues.put(col_12NB,CP);
+        contentValues.put(col_13NB, CITY);
+        contentValues.put(col_14NB,ADDR);
+        contentValues.put(col_15NB,BIOGRAPHY);
+        contentValues.put(col_16NB,PARTICULAR);
+        contentValues.put(col_17NB, PROFE );
+        contentValues.put(col_18NB, PROFESSION);
+
+
+        db.update(tableNameNeiVoisins1,contentValues,"EMAIL=?",new String[]{EMAIL});
+
+        return true;
+    }
+
+    public boolean updateloginpassword(String EMAIL, String PASSWORD) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col_7NB, PASSWORD);
+        db.update(tableNameNeiVoisins1, contentValues, "EMAIL=?", new String[]{EMAIL});
+
+        return true;
+    }
+    //Update Password:
+    public boolean updatepassword(String EMAIL, String PASSWORD) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col_7NB, PASSWORD);
+        db.update(tableNameNeiVoisins1, contentValues, "EMAIL=?", new String[]{EMAIL});
+
+        return true;
+    }
+
+    //Post request data:
+
+    public boolean postRequestDataN(String EMAIL, String LOCATION, String FORRENT, String DURATION , String BUDGET, String LOCATION2, String QUOTATION, String IMAGE, String POST, String BUDGET2, String NAME, String DATE, String TIME, String PINCODE, String IMAGEP, String POSTMONTH, String POSTYEAR, String POSTHH) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col_2P, EMAIL);
+        contentValues.put(col_3P, LOCATION);
+        contentValues.put(col_4P, FORRENT);
+        contentValues.put(col_5P,DURATION );
+        contentValues.put(col_6P, BUDGET);
+        contentValues.put(col_7P, LOCATION2);
+        contentValues.put(col_8P, QUOTATION);
+        contentValues.put(col_9P, IMAGE);
+        contentValues.put(col_10P, POST);
+        contentValues.put(col_11P, BUDGET2);
+        contentValues.put(col_12P, NAME);
+        contentValues.put(col_13P, DATE);
+        contentValues.put(col_14P, TIME);
+        contentValues.put(col_15P, PINCODE);
+        contentValues.put(col_16P, IMAGEP);
+        contentValues.put(col_17P, POSTMONTH);
+        contentValues.put(col_18P, POSTYEAR);
+        contentValues.put(col_19P, POSTHH);
+        long result = db.insert(tableNamPostRequeteDonneeV, null, contentValues);
+        if (result == -1)
+            return false;
+        else
+            return true;
+    }
+
+    public Cursor getPosDataNei(String EMAIL)
+    {
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursorF=db.rawQuery("Select * from "+tableNamPostRequeteDonneeV+" where EMAIL=?",new String[]{EMAIL});
+        return cursorF;
+    }
+
+    public Cursor getPinCodeDataNei(String PINCODE)
+    {
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursorF=db.rawQuery("Select * from "+tableNamPostRequeteDonneeV+" where PINCODE=?",new String[]{PINCODE});
+        return cursorF;
+    }
+
+    public boolean insertloginTime(String EMAIL,String LYEAR, String LMONTH,String LDATE, String LMINUTES, String LHOUR) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col_2Ti,EMAIL);
+        contentValues.put(col_3Ti,LYEAR);
+        contentValues.put(col_4Ti,LMONTH);
+        contentValues.put(col_5Ti,LDATE);
+        contentValues.put(col_6Ti,LMINUTES);
+        contentValues.put(col_7Ti,LHOUR);
+        long result = db.insert(tableNameNeiPostSentTime, null, contentValues);
+        if (result == -1)
+            return false;
+        else
+            return true;
+    }
+    public boolean updateloginTime(String EMAIL,String LYEAR, String LMONTH,String LDATE, String LMINUTES, String LHOUR) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col_2Ti,EMAIL);
+        contentValues.put(col_3Ti,LYEAR);
+        contentValues.put(col_4Ti,LMONTH);
+        contentValues.put(col_5Ti,LDATE);
+        contentValues.put(col_6Ti,LMINUTES);
+        contentValues.put(col_7Ti,LHOUR);
+        db.update(tableNameNeiPostSentTime, contentValues, "EMAIL=?", new String[]{EMAIL});
+
+        return true;
+    }
+
+
+    public Cursor getLoginDateNei(String EMAIL)
+    {
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursorF=db.rawQuery("Select * from "+tableNameNeiPostSentTime+" where EMAIL=?",new String[]{EMAIL});
+        return cursorF;
+    }
+
+    public boolean updateShowTime(int ID, String SHOWTIME1,String SHOWTIME2) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col_20P,SHOWTIME1);
+        contentValues.put(col_21P,SHOWTIME2);
+
+        db.update(tableNamPostRequeteDonneeV, contentValues, "ID=?", new String[]{String.valueOf(ID)});
+
+        return true;
+    }
+
+    public boolean insertshowTime( String SHOWTIME1 ,String SHOWTIME2) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(col_20P,SHOWTIME1 );
+        contentValues.put(col_21P,SHOWTIME2);
+        long result = db.insert(tableNamPostRequeteDonneeV, null, contentValues);
+        if (result == -1)
+            return false;
+        else
+            return true;
+    }
+
+    public Cursor getShowTimeData(String EMAIL)
+    {
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursorF=db.rawQuery("Select * from "+tableNamPostRequeteDonneeV+" where EMAIL=?",new String[]{EMAIL});
+        return cursorF;
     }
 
 }

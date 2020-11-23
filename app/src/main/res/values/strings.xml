@@ -145,6 +145,40 @@
         <item>Riel</item>
     </string-array>
 
+    <string-array name="rent">
+        <item>For rent</item>
+        <item>To buy</item>
+    </string-array>
+
+    <string-array name="particular">
+        <item>Particular</item>
+        <item>Self-employed</item>
+        <item>Craftman/Trader</item>
+        <item>Non-profit organization</item>
+    </string-array>
+    <string-array name="P">
+        <item>Your professional situvation</item>
+        <item>Student</item>
+        <item>Employee</item>
+        <item>Retirement</item>
+        <item>Unemployed</item>
+        <item>Craftsman</item>
+        <item>Trader</item>
+        <item>Freelander</item>
+    </string-array>
+    <string-array name="youare">
+        <item>You are:</item>
+        <item>A woman</item>
+        <item>A man</item>
+    </string-array>
+    <string-array name="Quatatio">
+        <item>Quotation</item>
+        <item>Budget per hour</item>
+        <item>Budget per day</item>
+        <item>Global budget</item>
+        <item>Unpaid</item>
+    </string-array>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_enquiry">enquiry</string>

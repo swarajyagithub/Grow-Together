@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context=".account">
+
+    <!-- TODO: Update blank fragment layout -->
+   <androidx.cardview.widget.CardView
+       android:layout_width="match_parent"
+       android:layout_marginTop="7dp"
+       android:id="@+id/ca1"
+       android:layout_height="115dp">
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="30dp"
+           android:id="@+id/MyProfile"
+           android:textSize="18sp"
+           android:text="My Profile"
+           android:gravity="center"
+           android:layout_marginTop="10dp"/>
+       <TextView
+           android:layout_width="match_parent"
+           android:layout_height="70dp"
+           android:id="@+id/security"
+           android:textSize="18sp"
+           android:text="Connection and Security"
+           android:gravity="center"
+           android:layout_marginTop="30dp"/>
+
+   </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/ca2"
+        android:layout_marginTop="125dp"
+        android:layout_height="115dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/MyRequest"
+            android:textSize="18sp"
+            android:text="My Requests"
+            android:gravity="center"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:id="@+id/contract"
+            android:textSize="18sp"
+            android:text="Contact Concluded"
+            android:gravity="center"
+            android:layout_marginTop="30dp"/>
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="245dp"
+        android:id="@+id/ca3"
+        android:layout_height="115dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/Mysub"
+            android:textSize="18sp"
+            android:text="My subscription"
+            android:gravity="center"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:id="@+id/mony"
+            android:textSize="18sp"
+            android:text="Money pot and deposits"
+            android:gravity="center"
+            android:layout_marginTop="30dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="55dp"
+            android:id="@+id/bg"
+            android:layout_marginLeft="295dp"
+            android:textColor="@color/blue"
+            android:textSize="18sp"
+            android:text="€ 0.00"/>
+
+
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:id="@+id/ca4"
+        android:layout_marginTop="368dp"
+
+        android:layout_height="115dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/faqc"
+            android:textSize="18sp"
+            android:text="Faq"
+            android:gravity="center"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:id="@+id/cont"
+            android:textSize="18sp"
+            android:text="Contact us"
+            android:gravity="center"
+            android:layout_marginTop="30dp"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="489dp"
+        android:id="@+id/ca5"
+        android:layout_height="115dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/invite"
+            android:textSize="18sp"
+            android:text="Invite my friends"
+            android:gravity="center"
+            android:layout_marginTop="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:id="@+id/logout"
+            android:textSize="18sp"
+            android:text="Logout"
+            android:gravity="center"
+            android:layout_marginTop="30dp"/>
+
+    </androidx.cardview.widget.CardView>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:id="@+id/faqfrag"
+        android:layout_height="match_parent"/>
+
+
+</FrameLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".network">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_height="10dp"
+        android:layout_width="match_parent"
+        android:background="@color/azur"/>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tablayoutAR"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+android:layout_marginTop="10dp"
+        android:background="@color/CoralPink"
+        app:tabIndicatorColor="@color/black"
+        app:tabSelectedTextColor="@color/black"
+        app:tabTextColor="@color/white">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabitem1AR"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+
+            android:text="My Neigbhorhood" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/tabitem2AR"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:text="My favourites" />
+
+    </com.google.android.material.tabs.TabLayout>
+    <TextView
+        android:layout_height="10dp"
+        android:layout_width="match_parent"
+        android:layout_marginTop="60dp"
+        android:background="@color/azur"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPagerARNB"
+        android:layout_marginTop="70dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.viewpager.widget.ViewPager>
+
+</FrameLayout>

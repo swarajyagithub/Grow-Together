@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".neigbhorRegistration">
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="20dp"
+       android:layout_marginLeft="100dp"
+        android:textSize="18sp"
+        android:id="@+id/texthome"
+        android:gravity="center"
+        android:text="Home"/>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="100dp"
+        android:textSize="18sp"
+        android:gravity="center"
+        android:text="Post a request"/>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="100dp"
+        android:textSize="18sp"
+        android:layout_marginLeft="100dp"
+        android:gravity="center"
+        android:text="All requests"/>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:id="@+id/reg"
+        android:layout_marginTop="150dp"
+        android:textSize="18sp"
+        android:layout_marginLeft="100dp"
+        android:gravity="center"
+        android:text="Registration"/>
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="190dp"
+        android:textSize="18sp"
+        android:layout_marginLeft="100dp"
+        android:gravity="center"
+        android:id="@+id/login"
+        android:text="Login"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginTop="560dp"
+        android:background="@color/green"
+
+
+       />
+    <TextView
+        android:layout_width="200dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="30dp"
+        android:id="@+id/textAl"
+        android:textSize="18sp"
+        android:text="Already a member?"
+        android:textColor="@color/white"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="610dp"
+
+        />
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="535dp"
+        android:background="@drawable/buttoncolorwhite"
+        android:layout_marginLeft="70dp"/>
+
+
+</RelativeLayout>
