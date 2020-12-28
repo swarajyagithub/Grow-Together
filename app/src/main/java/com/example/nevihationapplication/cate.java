@@ -61,7 +61,7 @@ public class cate extends AppCompatActivity {
     TextView edut;
     TextView elect;
 
-
+  int a;
 
 
 
