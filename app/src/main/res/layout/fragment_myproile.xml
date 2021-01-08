@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".myproileF">
+
+    <!-- TODO: Update blank fragment layout -->
+  
+    <ImageView
+        android:layout_width="match_parent"
+android:scaleType="centerCrop"
+        android:id="@+id/map"
+        android:layout_height="210dp"
+        android:src="@drawable/location"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/editpButton"
+        android:layout_marginLeft="130dp"
+        android:background="@drawable/buttoncolorpink"
+        android:drawableLeft="@drawable/ic_edit_black_24dp"
+        android:text="Edit my profile"/>
+    <androidx.cardview.widget.CardView
+        android:layout_width="340dp"
+        android:layout_height="310dp"
+        android:id="@+id/cardP1"
+        android:layout_marginTop="80dp"
+        android:layout_marginLeft="27dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="120dp"
+            app:cardCornerRadius="62dp"
+            android:layout_marginTop="25dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/pphoto"
+                android:scaleType="centerCrop"
+                android:src="@drawable/r1"/>
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="150dp"
+            android:id="@+id/textviewmypName"
+            android:layout_marginLeft="100dp"
+
+            android:textSize="30sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginTop="200dp"
+
+            android:layout_marginLeft="105dp"
+            android:src="@drawable/locicon"
+
+
+
+            />
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="200dp"
+            android:id="@+id/mypAddress"
+            android:layout_marginLeft="130dp"
+            android:text="    Mumbai"
+            android:textSize="20sp"
+
+           />
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="240dp"
+            android:id="@+id/mypparticular"
+            android:layout_marginLeft="100dp"
+            android:background="@drawable/border"
+            android:gravity="center"
+            android:text="  Particular"
+            android:textSize="20sp"
+
+            />
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="340dp"
+        android:layout_height="200dp"
+        android:id="@+id/cardP2"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="27dp">
+
+        <TextView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="70dp"
+            android:text="0"
+            android:layout_marginLeft="60dp"/>
+        <TextView
+            android:layout_width="105dp"
+            android:layout_height="35dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="100dp"
+            android:text="Bargain"
+            android:layout_marginLeft="40dp"/>
+
+
+        <TextView
+            android:layout_width="100dp"
+            android:layout_height="25dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="60dp"
+            android:text="No reviews"
+            android:layout_marginLeft="130dp"/>
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+
+
+            android:layout_marginTop="100dp"
+         android:scaleType="centerCrop"
+            android:src="@drawable/staricon"
+            android:layout_marginLeft="160dp"/>
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+
+
+            android:layout_marginTop="160dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/rplyicon"
+            android:layout_marginLeft="160dp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:textSize="20sp"
+            android:id="@+id/proflComplete"
+            android:textColor="@color/black"
+            android:layout_marginTop="70dp"
+            android:text="25%"
+            android:layout_marginLeft="270dp"/>
+        <TextView
+            android:layout_width="105dp"
+            android:layout_height="35dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="100dp"
+            android:text="  Profile"
+            android:layout_marginLeft="250dp"/>
+        <TextView
+            android:layout_width="105dp"
+            android:layout_height="35dp"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="130dp"
+            android:text="completed"
+            android:layout_marginLeft="240dp"/>
+
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/myprofragment"/>
+
+
+
+</FrameLayout>

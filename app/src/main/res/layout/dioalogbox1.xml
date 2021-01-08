@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tealgreen">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="ENQUIRY*"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="12dp"
+        android:textColor="@color/white"
+        android:id="@+id/textEnquiryT"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/edtenqT"
+        android:text="Hiii"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
+        android:paddingBottom="110dp"
+        android:background="@color/azur"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/tNameT"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="12dp"
+        android:text="NAME*"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/edtNameT"
+        android:text="Hiiiii"
+        android:background="@color/azur"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/txtMobileT"
+        android:layout_marginTop="285dp"
+        android:layout_marginLeft="12dp"
+        android:textColor="@color/white"
+        android:text="MOBILE*"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/edtmblT"
+        android:text="Hiiii"
+        android:layout_marginTop="316dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
+        android:background="@color/azur"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/idT"
+        android:layout_marginTop="353dp"
+        android:layout_marginLeft="12dp"
+        android:text="EMAIL*"
+        android:textColor="@color/white"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/edtIdT"
+        android:text="Hiiiii"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
+        android:background="@color/azur"
+        android:layout_marginTop="380dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/ExT"
+        android:layout_marginTop="422dp"
+        android:background="@color/tealgreen"/>
+
+
+</RelativeLayout>

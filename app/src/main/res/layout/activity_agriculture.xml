@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".agriculture">
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gridAgri"
+        android:layout_below="@+id/agriSearch"
+        android:layout_margin="8dp"
+        android:horizontalSpacing="16dp"
+        android:numColumns="1"
+        />
+    <SearchView
+        android:layout_width="390dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/agriSearch"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/edittextrounded"
+        android:queryHint="Sub Category Search..."
+        android:iconifiedByDefault="false"
+        android:layout_alignParentTop="true"/>
+
+
+
+
+</RelativeLayout>

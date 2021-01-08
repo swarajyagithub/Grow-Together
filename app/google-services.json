@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1084670935303",
+    "firebase_url": "https://nevihation-application-470a9.firebaseio.com",
+    "project_id": "nevihation-application-470a9",
+    "storage_bucket": "nevihation-application-470a9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084670935303:android:a844a0e858f1929a5205a2",
+        "android_client_info": {
+          "package_name": "com.example.nevihationapplication"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1084670935303-h4svm334rdm8a3rcrdkob7g4jg5a8t7n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nevihationapplication",
+            "certificate_hash": "4bac6164c07546396ad40c521bfb44c8bd2829d2"
+          }
+        },
+        {
+          "client_id": "1084670935303-dur1j175nua4m91elto4lr2l566fjvi3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqq8gjcp5ftcuyaMxRpkPWF-zCsiHJfMI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1084670935303-dur1j175nua4m91elto4lr2l566fjvi3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

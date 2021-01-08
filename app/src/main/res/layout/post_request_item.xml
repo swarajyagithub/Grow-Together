@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="20dp"
+        app:cardCornerRadius="62dp"
+        android:layout_marginTop="25dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/pphoto"
+            android:scaleType="centerCrop"
+            android:src="@drawable/r1"/>
+    </androidx.cardview.widget.CardView>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="25dp"
+        android:text="Ashwini"
+        android:id="@+id/name"/>
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/staricon"
+        android:layout_marginLeft="130dp"/>
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/staricon"
+        android:layout_marginLeft="150dp"/>
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/staricon"
+        android:layout_marginLeft="170dp"/>
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/staricon"
+        android:layout_marginLeft="190dp"/>
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="50dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/staricon"
+        android:layout_marginLeft="210dp"/>
+    <TextView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="80dp"
+        android:text="6 "
+        android:id="@+id/time1"/>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="148dp"
+        android:layout_marginTop="80dp"
+        android:text=" minutes"
+        android:id="@+id/time2"/>
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="130dp"
+        android:layout_marginTop="95dp"
+        android:text="ago"
+        />
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="250dp"
+        android:layout_marginTop="25dp"
+        android:id="@+id/q"
+        android:textColor="@color/green"
+        android:background="@drawable/border"
+        android:text="    Quotation"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="150dp"
+        android:id="@+id/post"
+        android:text="Hello Neighbor, I will help you"
+        />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+     android:layout_marginTop="220dp"
+        android:layout_marginLeft="30dp"
+        android:id="@+id/imgpost"
+        android:layout_marginRight="30dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/r1"/>
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+android:src="@drawable/lvicon"
+        android:layout_marginTop="425dp"
+
+        />
+    <TextView
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="60dp"
+android:text="1.I love"
+        android:layout_marginTop="425dp"
+
+        />
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="290dp"
+        android:src="@drawable/rplyicon"
+        android:layout_marginTop="425dp"
+
+        />
+    <TextView
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="330dp"
+        android:text="0"
+        android:layout_marginTop="425dp"
+
+        />
+    <TextView
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="340dp"
+        android:text="Share"
+        android:layout_marginTop="425dp"
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginLeft="20dp"
+
+        android:layout_marginTop="390dp"
+        android:text="1"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginLeft="40dp"
+
+        android:layout_marginTop="390dp"
+        android:text="anwser"
+        />
+</RelativeLayout>

@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".editmyprofilfrag">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/colorPrimaryDark"
+        />
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="20dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/w"
+        android:layout_marginLeft="100dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:layout_marginTop="150dp"
+        android:background="@color/azur"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_marginTop="175dp">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:text="Identity"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="65dp"
+                android:layout_marginLeft="10dp"
+
+                android:textSize="20sp"
+
+                android:text="Profile picture"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                app:cardCornerRadius="62dp"
+                android:layout_marginTop="110dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/profilephoto"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/r1"/>
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:layout_width="180dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="130dp"
+                android:layout_marginLeft="150dp"
+android:textColor="@color/white"
+                android:textSize="20sp"
+                android:background="@drawable/buttoncolrgreen"
+android:id="@+id/editphotobt"
+                android:text="Edit my photo"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="145dp"
+                android:layout_marginTop="230dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s1"/>
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:text="Long live Confidence!"
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="90dp"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="40dp"
+                    android:textSize="18sp"
+                    android:text="Put a photo of yourself where you can clearly see your face, without forgetting smile at your Neigbhors!"
+                    />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="380dp"
+                android:layout_marginLeft="10dp"
+android:id="@+id/youaret"
+                android:textSize="22sp"
+                android:textColor="@color/black"
+
+                android:text="You are"/>
+            <CheckBox
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="420dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/womanc"
+
+
+                />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="420dp"
+                android:layout_marginLeft="30dp"
+android:id="@+id/woman"
+                android:textSize="20sp"
+            android:background="@drawable/border"
+                android:gravity="center"
+
+                android:text="  A woman"/>
+
+            <CheckBox
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="420dp"
+                android:layout_marginLeft="210dp"
+                android:id="@+id/manc"
+
+
+                />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="420dp"
+                android:layout_marginLeft="210dp"
+android:id="@+id/man"
+                android:textSize="20sp"
+                android:background="@drawable/border"
+                android:gravity="center"
+
+                android:text="  A man"/>
+
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="470dp"
+                android:layout_marginLeft="10dp"
+
+                android:textSize="22sp"
+                android:textColor="@color/black"
+
+                android:text="Date of birth"/>
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="510dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/dbirth"
+                android:textSize="20sp"
+                android:background="@drawable/border"
+
+                android:hint=" Date of birth"
+
+               />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="550dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+
+                android:textSize="18sp"
+
+
+                android:text="We use this data for annalytical purpose and nevere share it with other Neigbhors."/>
+
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="610dp"
+                android:layout_marginLeft="10dp"
+
+                android:textSize="22sp"
+                android:textColor="@color/black"
+
+                android:text="Identity"/>
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="650dp"
+                android:layout_marginLeft="30dp"
+android:id="@+id/fname"
+                android:textSize="20sp"
+                android:background="@drawable/border"
+
+
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="640dp"
+                android:layout_marginLeft="40dp"
+                android:background="@color/white"
+
+                android:textSize="15sp"
+                android:textColor="@color/black"
+
+                android:text="First name"/>
+
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="710dp"
+                android:layout_marginLeft="30dp"
+android:id="@+id/lname"
+                android:textSize="20sp"
+                android:background="@drawable/border"
+
+
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="700dp"
+                android:layout_marginLeft="40dp"
+                android:background="@color/white"
+
+                android:textSize="15sp"
+                android:textColor="@color/black"
+
+                android:text="Last name"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="750dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+
+                android:textSize="18sp"
+
+
+                android:text="On your public profile, only your first name is"/>
+
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="800dp"
+                android:layout_marginLeft="10dp"
+
+                android:textSize="22sp"
+                android:textColor="@color/black"
+
+                android:text="Contact information"/>
+
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="850dp"
+                android:layout_marginLeft="30dp"
+android:id="@+id/email"
+                android:textSize="20sp"
+                android:background="@drawable/border"
+
+
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="840dp"
+                android:layout_marginLeft="40dp"
+                android:background="@color/white"
+
+                android:textSize="15sp"
+                android:textColor="@color/black"
+
+                android:text="Email"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="890dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+
+                android:textSize="18sp"
+
+
+                android:text="Your email address is not communicated to other Neigbhors."/>
+
+
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="950dp"
+                android:layout_marginLeft="30dp"
+android:id="@+id/mobile"
+                android:textSize="20sp"
+                android:background="@drawable/border"
+
+
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="940dp"
+                android:layout_marginLeft="40dp"
+                android:background="@color/white"
+
+                android:textSize="15sp"
+                android:textColor="@color/black"
+
+                android:text="Mobile phone"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="990dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="10dp"
+
+                android:textSize="18sp"
+
+
+                android:text="Your phone number will nevere be displyed to other Neigbhors. It is only communicated to a Neigbhors in the event of concluded contract."/>
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="1080dp"
+                android:layout_marginLeft="10dp"
+
+                android:textSize="22sp"
+                android:textColor="@color/black"
+
+                android:text="Address"/>
+
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="1120dp"
+                android:layout_marginLeft="30dp"
+android:id="@+id/cp"
+                android:textSize="20sp"
+                android:background="@drawable/border"
+
+
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="1110dp"
+                android:layout_marginLeft="40dp"
+                android:background="@color/white"
+
+                android:textSize="15sp"
+                android:textColor="@color/black"
+
+                android:text="CP"/>
+
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="1170dp"
+                android:layout_marginLeft="30dp"
+android:id="@+id/c1"
+                android:textSize="20sp"
+                android:background="@drawable/border"
+
+
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="1160dp"
+                android:layout_marginLeft="40dp"
+                android:background="@color/white"
+
+                android:textSize="15sp"
+                android:textColor="@color/black"
+
+                android:text="City"/>
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="1220dp"
+                android:layout_marginLeft="30dp"
+android:id="@+id/c2"
+                android:textSize="20sp"
+                android:background="@drawable/border"
+
+
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="1210dp"
+                android:layout_marginLeft="40dp"
+                android:background="@color/white"
+
+                android:textSize="15sp"
+                android:textColor="@color/black"
+
+                android:text="City"/>
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="1260dp"
+                android:layout_marginLeft="10dp"
+
+                android:textSize="22sp"
+                android:textColor="@color/black"
+
+                android:text="Presentation"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="1300dp"
+                android:layout_marginLeft="10dp"
+
+                android:textSize="20sp"
+
+                android:text="Biography"/>
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="80dp"
+                android:layout_marginTop="1340dp"
+                android:layout_marginLeft="30dp"
+                android:hint=" Your biography"
+                android:id="@+id/bio"
+                android:paddingBottom="50dp"
+                android:textSize="20sp"
+                android:background="@drawable/border"
+
+
+
+                />
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="145dp"
+                android:layout_marginTop="1430dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s1"/>
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:text="Take the time to introduce yourself to your Neigbhors."
+                    android:textColor="@color/black"/>
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="55dp"
+                    android:textSize="18sp"
+                    android:text="Do you have specific intrests of skills?"
+                    />
+
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="92dp"
+                    android:textSize="18sp"
+                    android:text="It's time to put yourself forward!"
+                    />
+
+            </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="1600dp"
+                android:layout_marginLeft="10dp"
+
+                android:textSize="20sp"
+
+                android:text="Status"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1620dp"
+                android:layout_marginLeft="10dp"
+android:textColor="@color/red"
+                android:textSize="18sp"
+                android:text="If you are acting in a professional capacity, you must choose professional status.Failing that, in application of article L 132-2 of the Consumer Code with punishes deceptive practices, you incur in particular a sentence of 2 years and a fine of 300,000. "/>
+<EditText
+    android:layout_width="320dp"
+    android:layout_height="40dp"
+    android:layout_marginTop="1770dp"
+    android:layout_marginLeft="30dp"
+    android:background="@drawable/border"/>
+<Spinner
+    android:layout_width="330dp"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="30dp"
+    android:id="@+id/spinnerpart"
+    android:layout_marginTop="1780dp"
+    android:entries="@array/particular"/>
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="1820dp"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/border"/>
+            <Spinner
+                android:layout_width="330dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinnerprof"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="1830dp"
+                android:entries="@array/P"/>
+            <EditText
+                android:layout_width="320dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="1870dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/profession"
+                android:hint=" Profession"
+                android:background="@drawable/border"/>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="145dp"
+                android:layout_marginTop="1910dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp">
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="10dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/s1"/>
+                <TextView
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="100dp"
+                    android:layout_marginTop="10dp"
+                    android:textSize="18sp"
+                    android:text="Only your status will appear on your profile. Be transparent, it is gurantee of trust with the Neigbhors."
+                   />
+
+
+
+
+            </androidx.cardview.widget.CardView>
+            <CheckBox
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="2060dp"
+                android:id="@+id/chbox"
+                android:layout_marginLeft="10dp"/>
+
+            <TextView
+                android:layout_width="320dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2060dp"
+                android:layout_marginLeft="50dp"
+                android:textSize="18sp"
+                android:text="I certify the accuracy of the information provided above."
+                />
+<Button
+    android:layout_width="180dp"
+    android:layout_height="40dp"
+    android:id="@+id/carry"
+    android:layout_marginTop="2130dp"
+    android:layout_marginLeft="100dp"
+
+    android:background="@drawable/buttoncolrgreen"
+    android:text="Carry on"/>
+
+
+        </RelativeLayout>
+
+
+
+
+
+    </ScrollView>
+
+
+</FrameLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".categoryAdvSearch">
+
+    <EditText
+        android:layout_width="385dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="7dp"
+        android:hint="  Search For"
+        android:layout_marginLeft="4dp"
+        android:background="@drawable/border"/>
+
+
+
+
+    <Spinner
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinner"
+        android:layout_marginTop="20dp"
+        android:entries="@array/City_Names"
+        android:layout_marginLeft="180dp"
+
+
+        />
+
+    <EditText
+        android:layout_width="337dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="4dp"
+        android:hint="  Search All Data"
+        android:background="@drawable/border"/>
+
+    <SearchView
+        android:layout_width="46dp"
+        android:layout_height="45dp"
+        android:id="@+id/svAdv"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="341dp"
+        android:background="@drawable/border"/>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/gridAdv"
+        android:layout_below="@+id/svAdv"
+        android:layout_margin="8dp"
+        android:horizontalSpacing="6dp"
+        android:verticalSpacing="6dp"
+        android:numColumns="2"/>
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

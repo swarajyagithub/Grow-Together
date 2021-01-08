@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+
+
+
+
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/postTe"
+            android:text="What do you need?"
+            android:textSize="25sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+    <ImageView
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/clsimage"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="310dp"
+        android:src="@drawable/closeicon"
+        android:scaleType="centerCrop"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:id="@+id/post1"
+        android:text="1-You ask:"
+        android:textSize="18sp"
+        android:textColor="@color/green"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="45dp"/>
+
+
+    <RadioButton
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/radio1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="75dp"
+        />
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginLeft="45dp"
+        android:text="An object"/>
+
+    <RadioButton
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:id="@+id/radio2"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="75dp"
+        />
+    <TextView
+        android:layout_width="100dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="75dp"
+        android:layout_marginLeft="190dp"
+        android:text="An service"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="110dp"
+        android:textSize="18sp"
+        android:text="2-Explain your needs to your neighbors:"
+        android:textColor="@color/green"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="145dp"
+        android:id="@+id/postdata"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/border"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:text="Minimum 25 characters(0/25)"
+        android:textSize="18sp"
+        android:layout_marginTop="220dp"
+        android:textColor="@color/black"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="252dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/spd0"
+        android:background="@drawable/border"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="252dp"
+        android:id="@+id/spd2"
+        android:background="@drawable/border"
+
+        />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="252dp"
+        android:id="@+id/spdqutation"
+
+        android:entries="@array/Quatatio"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="252dp"
+        android:id="@+id/spd1"
+
+        android:entries="@array/rent"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="296dp"
+        android:id="@+id/qutE"
+        android:background="@drawable/border"
+
+        />
+
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="295dp"
+        android:layout_marginLeft="10dp"
+       android:hint=" Duration   (Days)"
+        android:id="@+id/ed1"
+        android:background="@drawable/border"/>
+    <EditText
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="295dp"
+        android:hint=" Budget   €"
+        android:id="@+id/ed2"
+        android:layout_marginLeft="179dp"
+        android:background="@drawable/border"/>
+    <CheckBox
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="339dp"/>
+    <TextView
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="339dp"
+        android:layout_marginLeft="45dp"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        android:text="Ask only companies"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="372dp"
+        android:text="3-Where do you need it?"
+        android:textSize="18sp"
+        android:textColor="@color/green"
+        android:layout_marginLeft="10dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:id="@+id/loc2"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/border"
+        android:layout_marginTop="405dp"/>
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/bordercolor"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="464dp"
+        android:id="@+id/buttonimagepostupload"
+        android:textColor="@color/white"
+        android:text="Upload image"/>
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="453dp"
+        android:scaleType="centerCrop"
+        android:layout_marginLeft="200dp"
+        android:id="@+id/imagepostupload"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginLeft="15dp"
+        android:background="@drawable/bordercolor"
+        android:layout_marginRight="15dp"
+android:id="@+id/btpost"
+        android:layout_marginTop="530dp"
+        android:textColor="@color/white"
+        android:text="Post my request"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_marginTop="583dp"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

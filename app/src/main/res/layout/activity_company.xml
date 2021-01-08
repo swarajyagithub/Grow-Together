@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".company">
+
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/gridCompany"
+        android:layout_margin="8dp"
+
+        android:verticalSpacing="10dp"
+        android:numColumns="1"
+        />
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:id="@+id/addData"
+        android:text="+"
+        android:textSize="25sp"
+        android:background="@drawable/circlebutton"
+        android:layout_below="@+id/gridCompany"
+        android:layout_marginLeft="350dp"
+
+        />
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

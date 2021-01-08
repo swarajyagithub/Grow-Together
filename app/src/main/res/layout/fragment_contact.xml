@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".contactFrag">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:textStyle="bold"
+    android:textSize="30sp"
+    android:textColor="@color/black"
+    android:text="Contact us"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="60dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        android:textColor="@color/black"
+        android:text="For all inquiries please contact us"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="100dp"
+        android:textStyle="bold"
+        android:textSize="18sp"
+
+        android:text="Your message concerns*"/>
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="135dp"
+        android:layout_marginLeft="30dp"
+        android:background="@drawable/border"/>
+    <Spinner
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="140dp"
+        android:entries="@array/particular"/>
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginLeft="30dp"
+
+        android:textSize="20sp"
+        android:background="@drawable/border"
+
+
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="190dp"
+        android:layout_marginLeft="40dp"
+        android:background="@color/white"
+
+        android:textSize="15sp"
+        android:textColor="@color/black"
+
+        android:text="Last name"/>
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="30dp"
+
+        android:textSize="20sp"
+        android:background="@drawable/border"
+
+
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="40dp"
+        android:background="@color/white"
+
+        android:textSize="15sp"
+        android:textColor="@color/black"
+
+        android:text="First name"/>
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="320dp"
+        android:layout_marginLeft="30dp"
+
+        android:textSize="20sp"
+        android:background="@drawable/border"
+
+
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="310dp"
+        android:layout_marginLeft="40dp"
+        android:background="@color/white"
+
+        android:textSize="15sp"
+        android:textColor="@color/black"
+
+        android:text="Society"/>
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="380dp"
+        android:layout_marginLeft="30dp"
+
+        android:textSize="20sp"
+        android:background="@drawable/border"
+
+
+
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:layout_marginTop="370dp"
+        android:layout_marginLeft="40dp"
+        android:background="@color/white"
+
+        android:textSize="15sp"
+        android:textColor="@color/black"
+
+        android:text="Email"/>
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="440dp"
+        android:layout_marginLeft="30dp"
+        android:hint=" Your message*"
+        android:paddingBottom="60dp"
+        android:background="@drawable/border"/>
+</FrameLayout>

@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addServices">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp">
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="7dp"
+            android:textColor="@color/black"
+            android:text="COMPANY*"/>
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginLeft="162dp"
+
+            android:entries="@array/Company_Names"
+            android:id="@+id/spCompany"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginTop="42dp"
+            android:layout_marginLeft="7dp"
+            android:text="PRODUCT/SERVICE NAME*"/>
+        <EditText
+            android:layout_width="208dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="162dp"
+            android:layout_marginTop="42dp"
+            android:id="@+id/pname"
+            android:background="@drawable/border"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="81dp"
+            android:textColor="@color/black"
+            android:text="CATEGORY*"/>
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="81dp"
+            android:layout_marginLeft="162dp"
+
+            android:entries="@array/Category"
+            android:id="@+id/spCategory"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="110dp"
+            android:textColor="@color/black"
+
+            android:text="SUB-CATEGORY*"/>
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="110dp"
+            android:layout_marginLeft="162dp"
+            android:entries="@array/SubCategory"
+
+            android:id="@+id/spSubCategory"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="142dp"
+            android:layout_marginLeft="7dp"
+            android:textColor="@color/black"
+            android:text="CURRENCY*"/>
+        <Spinner
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="142dp"
+            android:layout_marginLeft="162dp"
+
+            android:entries="@array/Currency"
+            android:id="@+id/spCurrency"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="177dp"
+            android:layout_marginLeft="7dp"
+            android:textColor="@color/black"
+            android:text="PRICE"/>
+        <EditText
+            android:layout_width="208dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="162dp"
+            android:layout_marginTop="177dp"
+            android:id="@+id/pr"
+            android:background="@drawable/border"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="210dp"
+            android:layout_marginLeft="7dp"
+            android:textColor="@color/black"
+            android:text="DISCOUNT PRICE"/>
+        <EditText
+            android:layout_width="208dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="162dp"
+            android:layout_marginTop="210dp"
+            android:id="@+id/dispr"
+            android:background="@drawable/border"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="245dp"
+            android:text="SELECT IMAGE"
+            android:id="@+id/selectIMG"/>
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_marginTop="245dp"
+            android:layout_marginLeft="162dp"
+            android:id="@+id/prdI"/>
+        <CheckBox
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="325dp"
+            android:id="@+id/chkbutton"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="325dp"
+            android:text="New Offer"
+            android:textColor="@color/black"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="360dp"
+            android:textColor="@color/black"
+            android:text="DISCRIPTION"/>
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginLeft="162dp"
+            android:layout_marginTop="360dp"
+            android:hint=" write product discription..."
+            android:textSize="15sp"
+            android:paddingBottom="58dp"
+            android:id="@+id/spd"
+            android:background="@drawable/border"/>
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="7dp"
+            android:layout_marginTop="470dp"
+            android:text="KEYWORD*"
+            android:textColor="@color/black"/>
+        <EditText
+            android:layout_width="200dp"
+            android:layout_height="70dp"
+            android:layout_marginLeft="162dp"
+            android:layout_marginTop="470dp"
+android:id="@+id/ky"
+            android:textSize="15sp"
+
+            android:background="@drawable/border"/>
+        <ImageView
+            android:layout_width="90dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="540dp"
+            android:layout_marginLeft="162dp"
+            android:id="@+id/prdP"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="600dp"
+            android:id="@+id/addSer"
+            android:text="ADD"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp"/>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

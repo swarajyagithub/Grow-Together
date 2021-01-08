@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tealgreen">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="ENQUIRY*"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="12dp"
+        android:textColor="@color/white"
+        android:id="@+id/textEnquiry"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:id="@+id/edtenq"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
+        android:hint=" write your enquiry here..."
+        android:paddingBottom="110dp"
+        android:background="@color/azur"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/tName"
+        android:layout_marginTop="220dp"
+        android:layout_marginLeft="12dp"
+        android:text="NAME*"
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/edtName"
+        android:background="@color/azur"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/txtMobile"
+        android:layout_marginTop="285dp"
+        android:layout_marginLeft="12dp"
+        android:textColor="@color/white"
+        android:text="MOBILE*"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/edtmbl"
+        android:layout_marginTop="316dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
+        android:background="@color/azur"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/id"
+        android:layout_marginTop="353dp"
+        android:layout_marginLeft="12dp"
+        android:text="EMAIL*"
+        android:textColor="@color/white"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/edtId"
+        android:layout_marginLeft="19dp"
+        android:layout_marginRight="19dp"
+        android:background="@color/azur"
+        android:layout_marginTop="380dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:id="@+id/Ex"
+        android:layout_marginTop="422dp"
+        android:background="@color/tealgreen"/>
+
+
+</RelativeLayout>

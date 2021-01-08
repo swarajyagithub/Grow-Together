@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+
+
+ <TextView
+     android:layout_width="330dp"
+     android:layout_height="35dp"
+     android:layout_marginTop="4dp"
+     android:text="Name"
+     android:id="@+id/txt1"/>
+    <TextView
+        android:id="@+id/txt2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="340dp"
+        android:paddingTop="6dp"
+        android:textAlignment="center"
+        android:text="Nam"
+        android:background="@drawable/circle"/>
+
+
+    
+</RelativeLayout>

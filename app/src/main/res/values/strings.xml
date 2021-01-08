@@ -1,0 +1,188 @@
+<resources>
+    <string name="app_name"></string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="send">Send Enquiry</string>
+    <string name="bird">Birds Seeds, Poultry &amp; Animal Food</string>
+    <string name="computer">Computer &amp; IT Solutions</string>
+
+    <string-array name="City_Names">
+        <item>All Cities</item>
+        <item>Ahmedabad</item>
+        <item>Australia</item>
+        <item>Balotra</item>
+        <item>Bangalor</item>
+        <item>Bhandup</item>
+        <item>Bhavnagar</item>
+        <item>Bhopal</item>
+        <item>Chennai</item>
+        <item>Delhi</item>
+        <item>Ernakulam</item>
+    </string-array>
+
+    <string-array name="Country_Names">
+        <item>Afganistan</item>
+        <item>Australia</item>
+        <item>Belgium</item>
+        <item>Brazil</item>
+        <item>Egypt</item>
+        <item>France</item>
+        <item>Germany</item>
+        <item>India</item>
+        <item>Iran</item>
+        <item>Japan</item>
+        <item>Korea</item>
+        <item>Malaysia</item>
+        <item>Oman</item>
+        <item>Russia</item>
+        <item>Turkey</item>
+        <item>Uganda</item>
+        <item>Zambia</item>
+    </string-array>
+
+    <string-array name="State_Names">
+        <item>Assam</item>
+        <item>Bihar</item>
+        <item>Chhattisgarh</item>
+        <item>Goa</item>
+        <item>Gujarat</item>
+        <item>Haryana</item>
+        <item>Kerala</item>
+        <item>Maharastra</item>
+        <item>Manipur</item>
+        <item>Odisha</item>
+        <item>Sikkim</item>
+        <item>West Bengal</item>
+    </string-array>
+
+    <string-array name="District_Names">
+        <item>Satara</item>
+        <item>Kolhapur</item>
+        <item>Pune</item>
+        <item>Mumbai</item>
+        <item>Nashik</item>
+        <item>Solapur</item>
+    </string-array>
+    <string-array name="Company_Names">
+        <item>Select Company</item>
+        <item>Infosys Private Ltd.</item>
+        <item>Wipro Limited</item>
+        <item>Tata Consultancy Services</item>
+        <item>Tech Mahindra</item>
+        <item>Cognizant</item>
+        <item>Amdocs</item>
+        <item>Atos Syntel</item>
+        <item>Capgemini</item>
+        <item>iNautixx/BNY Mellon</item>
+        <item>IBM</item>
+        <item>Accenture</item>
+    </string-array>
+    <string-array name="Work_Experience">
+        <item>Select Work Experience</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
+    <string-array name="Higher_Education">
+        <item>Select Higher Education</item>
+        <item>M.E.</item>
+        <item>B.E.</item>
+        <item>Diploma in Engineering</item>
+        <item>B.Tech</item>
+        <item>M.C.A.</item>
+        <item>B.C.A.</item>
+        <item>M.B.A.</item>
+        <item>B.Sc.</item>
+        <item>M.Sc.</item>
+        <item>B.Com</item>
+    </string-array>
+    <string-array name="Job_Category">
+        <item>Select Job Category</item>
+        <item>Support Specialist</item>
+        <item>Computer Programmer</item>
+        <item>Quality Assurance Tester</item>
+        <item>Web Developer</item>
+        <item>It technician</item>
+        <item>Systems Analyst</item>
+        <item>Network Engineer</item>
+        <item>User Experience Designer</item>
+        <item>Database Administrator</item>
+    </string-array>
+    <string-array name="ReferTo">
+        <item>ReferTo</item>
+    </string-array>
+
+    <string-array name="Category">
+        <item>Select Category</item>
+        <item>Agriculture and Farming</item>
+        <item>Apparel and Garments</item>
+        <item>Automobile, Parts and Spares</item>
+        <item>Building and Construction</item>
+        <item>Business and Audit Services</item>
+        <item>Computer and IT Solutions</item>
+        <item>Education</item>
+    </string-array>
+    <string-array name="SubCategory">
+        <item>Select Sub Catrgory</item>
+    </string-array>
+    <string-array name="Currency">
+        <item>Select Currency</item>
+        <item>Rupee</item>
+        <item>Dollar</item>
+        <item>Euro</item>
+        <item>Pound</item>
+        <item>Ruble</item>
+        <item>Pula</item>
+        <item>Lev</item>
+        <item>Riel</item>
+    </string-array>
+
+    <string-array name="rent">
+        <item>For rent</item>
+        <item>To buy</item>
+    </string-array>
+
+    <string-array name="particular">
+        <item>Particular</item>
+        <item>Self-employed</item>
+        <item>Craftman/Trader</item>
+        <item>Non-profit organization</item>
+    </string-array>
+    <string-array name="P">
+        <item>Your professional situvation</item>
+        <item>Student</item>
+        <item>Employee</item>
+        <item>Retirement</item>
+        <item>Unemployed</item>
+        <item>Craftsman</item>
+        <item>Trader</item>
+        <item>Freelander</item>
+    </string-array>
+    <string-array name="youare">
+        <item>You are:</item>
+        <item>A woman</item>
+        <item>A man</item>
+    </string-array>
+    <string-array name="Quatatio">
+        <item>Quotation</item>
+        <item>Budget per hour</item>
+        <item>Budget per day</item>
+        <item>Global budget</item>
+        <item>Unpaid</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_enquiry">enquiry</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="addcompany">Add new company</string>
+</resources>

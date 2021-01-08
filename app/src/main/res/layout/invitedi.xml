@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+      android:layout_marginLeft="50dp"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+
+        android:text="Invite my friends"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginLeft="20dp"
+
+
+        android:textSize="18sp"
+
+        android:text="Invite your friends who are not yet on"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginLeft="10dp"
+
+
+        android:textSize="18sp"
+
+        android:text="They can post their first request or offer their services."/>
+
+<Button
+    android:layout_width="180dp"
+    android:layout_height="50dp"
+    android:layout_marginTop="180dp"
+    android:layout_marginLeft="80dp"
+    android:background="@drawable/buttoncolrgreen"
+    android:text="Send invitation"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_marginTop="240dp"
+        android:layout_height="20dp"/>
+</RelativeLayout>

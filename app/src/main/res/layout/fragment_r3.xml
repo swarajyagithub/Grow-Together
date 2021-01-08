@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".r1"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginLeft="7dp"
+        android:background="@drawable/border"/>
+
+
+    <com.toptoche.searchablespinnerlibrary.SearchableSpinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/referTo"
+        app:hintText="Refer To"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginLeft="7dp"
+
+
+        />
+
+
+    <EditText
+        android:layout_width="320dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="7dp"
+        android:background="@drawable/border"
+        android:hint=" Referral Name"
+        android:id="@+id/rName"/>
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="327dp"
+        android:src="@drawable/referalicon"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/rPhone"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/border"
+        android:hint=" Phone Number"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:hint=" Email id"
+        android:id="@+id/rEmail"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="146dp"
+        android:background="@drawable/border"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="190dp"
+        android:hint=" Address"
+        android:background="@drawable/border"
+        android:paddingBottom="75dp"
+        android:id="@+id/radd"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="294dp"
+        android:background="@drawable/border"
+        android:hint=" Comment"
+        android:paddingBottom="90dp"
+        android:id="@+id/rComment"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="523dp"
+        android:layout_marginLeft="7dp"
+        android:text="Level"
+        android:textColor="@color/black"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Save"
+        android:id="@+id/AR"
+        android:layout_marginTop="600dp"/>
+
+</FrameLayout>

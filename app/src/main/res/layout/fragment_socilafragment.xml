@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".socilafragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/txtCom"
+            android:text="Contact Person"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="7dp"/>
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:id="@+id/txtName"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="44dp"
+            android:layout_marginLeft="7dp"
+            android:text="Name*"/>
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="44dp"
+            android:layout_marginLeft="120dp"
+            android:background="@drawable/border"/>
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:id="@+id/txtCEO"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="7dp"
+            android:text="Telephone*"/>
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="120dp"
+            android:background="@drawable/border"/>
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+            android:id="@+id/txtAdd"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="117dp"
+            android:layout_marginLeft="7dp"
+            android:text="Email ID*"/>
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="117dp"
+            android:layout_marginLeft="120dp"
+            android:background="@drawable/border"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:id="@+id/txtSoc"
+            android:text="Social Media"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="152dp"
+            android:layout_marginLeft="7dp"/>
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="186dp"
+            android:layout_marginLeft="7dp"
+            android:text="Facebook*"/>
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="186dp"
+            android:layout_marginLeft="120dp"
+            android:background="@drawable/border"/>
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="219dp"
+            android:layout_marginLeft="7dp"
+            android:text="Twitter*"/>
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="219dp"
+            android:layout_marginLeft="120dp"
+            android:background="@drawable/border"/>
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="30dp"
+
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="252dp"
+            android:layout_marginLeft="7dp"
+            android:text="Linked In*"/>
+        <EditText
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="252dp"
+            android:layout_marginLeft="120dp"
+            android:background="@drawable/border"/>
+    </RelativeLayout>
+    </ScrollView>
+</FrameLayout>
